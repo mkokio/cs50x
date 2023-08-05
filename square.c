@@ -16,7 +16,7 @@ int main(void)
     }
 }
 
-get_size(void)
+int get_size(void) //output return is integer, name is "get_size", no argument or parameter
 {
     int n;
         do
