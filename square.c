@@ -12,7 +12,13 @@ int main(void)
     print_square(n);
 }
 
-
+char prompt_style(void);
+{
+    do
+    {
+        style = get_char("What kind of square? Select [p][s][] ");
+    }
+}
 
 int get_size(void) //output return is integer, name is "get_size", no argument or parameter
 {
