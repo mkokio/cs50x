@@ -3,19 +3,8 @@
 
 int main(void)
 {
-    //get the size
     int n = get_size()
-
-    //print the square
-    print_square()
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            printf("O");
-        }
-        printf("\n");
-    }
+    print_square(n)
 }
 
 int get_size(void) //output return is integer, name is "get_size", no argument or parameter
@@ -29,3 +18,14 @@ int get_size(void) //output return is integer, name is "get_size", no argument o
         return n;
 }
 
+void print_square(int size) //no output type, name is "print_square", parameter is the size of desired square
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            printf("X");
+        }
+        printf("\n");
+    }
+}
