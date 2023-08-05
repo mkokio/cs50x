@@ -3,6 +3,7 @@
 
 int main(void)
 {
+    //square_size
     int n;
     do
     {
@@ -18,3 +19,5 @@ int main(void)
         printf("\n");
     }
 }
+
+square_size(void)
