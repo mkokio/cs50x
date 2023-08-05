@@ -1,14 +1,18 @@
 #include <stdio.h>
 #include <cs50.h>
 
+string prompt_style();
 int get_size(void); //basically initializing or importing these functions,
 void print_square(int size); //as "main" is usually at the top
 
 int main(void)
 {
+    prompt_style();
     int n = get_size();
     print_square(n);
 }
+
+
 
 int get_size(void) //output return is integer, name is "get_size", no argument or parameter
 {
@@ -31,5 +35,6 @@ void print_square(int size) //no output type, name is "print_square", parameter 
         }
         printf("\n");
     }
-    printf("Cool poop square!\n");
+    printf("Cool square!\n");
+    printf("You used this symbol)
 }
