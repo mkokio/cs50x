@@ -27,8 +27,9 @@ void print_square(int size) //no output type, name is "print_square", parameter 
     {
         for (int j = 0; j < size; j++)
         {
-            printf("X");
+            printf("\U0001F4A9");
         }
         printf("\n");
     }
+    printf("Cool poop square!\n");
 }
