@@ -24,4 +24,5 @@ int get_size(void) //output return is integer, name is "get_size", no argument o
             n = get_int("Size of each square's side? ");
         }
         while (n < 1);
+        return n;
 }
