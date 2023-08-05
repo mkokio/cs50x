@@ -3,13 +3,9 @@
 
 int main(void)
 {
-    //square_size
-    int n;
-    do
-    {
-        n = get_int("Size of each square's side? ");
-    }
-    while (n < 1);
+    //get the size
+    int n = get_size()
+
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
@@ -20,4 +16,12 @@ int main(void)
     }
 }
 
-square_size(void)
+get_size(void)
+{
+    int n;
+        do
+        {
+            n = get_int("Size of each square's side? ");
+        }
+        while (n < 1);
+}
