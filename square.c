@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <cs50.h>
 
-string prompt_style();
+char prompt_style();
 int get_size(void); //basically initializing or importing these functions,
-void print_square(int size); //as "main" is usually at the top
+void print_square(int size, char style); //as "main" is usually at the top
 
 int main(void)
 {
@@ -25,7 +25,7 @@ int get_size(void) //output return is integer, name is "get_size", no argument o
         return n;
 }
 
-void print_square(int size) //no output type, name is "print_square", parameter is the size of desired square
+void print_square(int size, char style) //no output type, name is "print_square", parameter is the size of desired square
 {
     for (int i = 0; i < size; i++)
     {
