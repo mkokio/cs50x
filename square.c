@@ -9,15 +9,17 @@ int main(void)
 {
     prompt_style();
     int n = get_size();
-    print_square(n);
+    print_square(n, style);
 }
 
 char prompt_style(void);
 {
     do
     {
-        style = get_char("What kind of square? Select [p][s][] ");
+        style = get_char("What kind of square? Select [p][s][b] ");
     }
+    while (style != 'p' && style != 's' && style != 'b');
+    return style;
 }
 
 int get_size(void) //output return is integer, name is "get_size", no argument or parameter
@@ -33,14 +35,31 @@ int get_size(void) //output return is integer, name is "get_size", no argument o
 
 void print_square(int size, char style) //no output type, name is "print_square", parameter is the size of desired square
 {
+    if style == p
+    {
+        char output[] = "\U0001F4A9";
+    }
+    else if style == s
+    {
+        char output[] = "\u2606"
+    }
+    else
+    {
+        char output[] = "\u1F34C"
+    }
+
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
         {
-            printf("\U0001F4A9");
+            printf(output);
         }
         printf("\n");
     }
     printf("Cool square!\n");
     printf("You used this symbol)
 }
+
+// \u2606 star
+// \U0001F4A9 poop
+// \u1F34C banana
