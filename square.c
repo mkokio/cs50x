@@ -36,6 +36,7 @@ int get_size(void) //output return is integer, name is "get_size", no argument o
 
 void print_square(int size, char style) //no output type, name is "print_square", parameter is the size of desired square
 {
+    char output[];
     if (style == 'p')
     {
         char output[] = "\U0001F4A9";
