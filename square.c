@@ -12,7 +12,7 @@ int main(void)
     print_square(n, style);
 }
 
-char prompt_style(void);
+char prompt_style(void)
 {
     do
     {
