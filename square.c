@@ -7,7 +7,7 @@ void print_square(int size, char style); //as "main" is usually at the top
 
 int main(void)
 {
-    prompt_style();
+    char style = prompt_style();
     int n = get_size();
     print_square(n, style);
 }
