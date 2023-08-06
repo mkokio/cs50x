@@ -36,30 +36,41 @@ int get_size(void) //output return is integer, name is "get_size", no argument o
 
 void print_square(int size, char style) //no output type, name is "print_square", parameter is the size of desired square
 {
-    char output[];
+    char output[5]; // Sufficient space to store any Unicode character
     if (style == 'p')
     {
-        char output[] = "\U0001F4A9";
+        output[0] = 0xF0;
+        output[1] = 0x9F;
+        output[2] = 0x92;
+        output[3] = 0xA9;
+        output[4] = '\0'; // Null-terminate the string
     }
     else if (style == 's')
     {
-        char output[] = "\u2606";
+        output[0] = 0xE2;
+        output[1] = 0x98;
+        output[2] = 0x86;
+        output[3] = '\0'; // Null-terminate the string
     }
     else
     {
-        char output[] = "\u1F34C";
+        output[0] = 0xF0;
+        output[1] = 0x9F;
+        output[2] = 0x8D;
+        output[3] = 0x8C;
+        output[4] = '\0'; // Null-terminate the string
     }
 
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
         {
-            printf("%s", output[]);
+            printf("%s", output);
         }
         printf("\n");
     }
     printf("Cool square!\n");
-    printf("You used this symbol -> %s", output);
+    printf("You used this symbol -> %s\n", output);
 }
 
 // \u2606 star
