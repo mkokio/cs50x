@@ -32,9 +32,9 @@ int prompt_phone_number(void)
     return phone_number;
 }
 
-void print_details(char n, int a, int p)
+void print_details(string n, int a, int p)
 {
-    printf("Hello, %s.", n);
-    printf("You are %i.", a);
-    printf("Your phone number is %i.", p);
+    printf("Hello, %s.\n", n);
+    printf("You are %i.\n", a);
+    printf("Your phone number is %i.\n", p);
 }
