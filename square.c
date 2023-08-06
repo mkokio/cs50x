@@ -14,6 +14,7 @@ int main(void)
 
 char prompt_style(void)
 {
+    char style;
     do
     {
         style = get_char("What kind of square? Select [p][s][b] ");
