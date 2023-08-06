@@ -4,6 +4,7 @@
 string prompt_name(void);
 int prompt_age(void);
 int prompt_phone_number(void);
+void print_details(string n, int a, int p);
 
 int main(void)
 {
