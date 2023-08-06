@@ -53,7 +53,7 @@ void print_square(int size, char style) //no output type, name is "print_square"
     {
         for (int j = 0; j < size; j++)
         {
-            printf(char output[]);
+            printf(output[]);
         }
         printf("\n");
     }
