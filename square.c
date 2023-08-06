@@ -57,7 +57,7 @@ void print_square(int size, char style) //no output type, name is "print_square"
         printf("\n");
     }
     printf("Cool square!\n");
-    printf("You used this symbol -> %c", output);
+    printf("You used this symbol -> %s", output);
 }
 
 // \u2606 star
