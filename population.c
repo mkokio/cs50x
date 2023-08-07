@@ -11,12 +11,13 @@ int main(void)
     int c;
     do
     {
-        c = get_int("How many llamas do you have? ");
+        c = get_int("How many llamas do you have? )");
+        if (c < 10)
+        {
+            printf("Protip, you need more than nine.\n");
+        }
     }
     while (c < 10);
-     {
-        printf("Protip, you need more that nine\n");
-     }
 
     //needed llamas
     int n;
