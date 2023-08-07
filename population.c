@@ -23,7 +23,7 @@ int main(void)
     for (y = 0; c < n; y++)
     {
         printf("Year %i: %i llamas.\n", y, c);
-        c = c + (c/12);
+        c += (c/12);
     }
 
     //print result
