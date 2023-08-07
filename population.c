@@ -11,9 +11,9 @@ int main(void)
     int c;
     do
     {
-        c = get_int("How many llamas do you have? ");
+        c = get_int("How many llamas do you have? ()");
     }
-    while (c > 9);
+    while (c < 10);
 
     //needed llamas
     int n;
