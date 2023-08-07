@@ -7,10 +7,12 @@
 
 int main(void)
 {
-    string current_llamas = get_string("How many llamas do you have? ");
-    string needed_llamas = get_string("How many llamas do you need? ");
-    for (int y = 0; y < )
-
-
-
+    float c = get_float("How many llamas do you have? "); //current llamas
+    float n = get_float("How many llamas do you need? "); //needed llamas
+    for (int y = 0; c => n, y++)
+    {
+        c = c + (c * .3) - (c * .4);
+    }
+    printf("After this many years: %i\n", y);
+    printf("You now this may llamas: %f\n", c);
 }
