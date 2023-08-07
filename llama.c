@@ -9,7 +9,8 @@ int main(void)
 {
     float c = get_float("How many llamas do you have? "); //current llamas
     float n = get_float("How many llamas do you need? "); //needed llamas
-    for (int y = 0; c => n, y++)
+    
+    for (int y = 0; c < n; y++)
     {
         c = c + (c * .3) - (c * .4);
     }
