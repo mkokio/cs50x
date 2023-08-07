@@ -8,7 +8,7 @@
 int main(void)
 {
     //current llamas
-    int c = get_int("How many llamas do you have? ");
+    float c = get_float("How many llamas do you have? ");
 
     //needed llamas
     int n;
@@ -22,8 +22,8 @@ int main(void)
     int y;
     for (y = 0; c < n; y++)
     {
-        printf("Year %i: %d llamas.\n", y, c);
-        (float) c += (c/12);
+        printf("Year %i: %f llamas.\n", y, c);
+        c += (c/12);
     }
 
     //print result
