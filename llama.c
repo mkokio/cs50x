@@ -13,6 +13,7 @@ int main(void)
     for (y = 0; c < n; y++)
     {
         c = c + (c * .3) - (c * .4);
+        printf("Year %i: f% llamas.\n", y, c);
     }
     printf("After this many years: %i\n", y);
     printf("You now this may llamas: %f\n", c);
