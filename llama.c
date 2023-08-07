@@ -7,10 +7,10 @@
 
 int main(void)
 {
-    string current_llamaes = get_string("How many llamas do you have? ");
+    string current_llamas = get_string("How many llamas do you have? ");
     string needed_llamas = get_string("How many llamas do you need? ");
     int years;
-    
+
 
 
 }
