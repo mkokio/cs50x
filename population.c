@@ -14,7 +14,7 @@ int main(void)
         c = get_int("How many llamas do you have? ");
         if (c < 10)
         {
-            printf("Protip, you need more than nine.\n");
+            printf("Protip, you need more than eleven.\n");
         }
     }
     while (c < 10);
@@ -32,7 +32,7 @@ int main(void)
     for (y = 0; c < n; y++)
     {
         printf("Year %i: %i llamas.\n", y, c);
-        c += (c/12);
+        c += c/12;
     }
 
     //print result
