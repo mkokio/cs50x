@@ -12,8 +12,8 @@ int main(void)
     int y;
     for (y = 0; c < n; y++)
     {
-        c = c + (c * .3) - (c * .4);
-        printf("Year %i: f% llamas.\n", y, c);
+        printf("Year %i: %f llamas.\n", y, c);
+        c = c + (c/3) - (c/4);
     }
     printf("After this many years: %i\n", y);
     printf("You now this may llamas: %f\n", c);
