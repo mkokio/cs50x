@@ -22,11 +22,11 @@ int main(void)
     int y;
     for (y = 0; c < n; y++)
     {
-        printf("Year %i: %i llamas.\n", y, c);
-        c += (c/12);
+        printf("Year %i: %d llamas.\n", y, c);
+        (float) c += (c/12);
     }
 
     //print result
     printf("After this many years: %i\n", y);
-    printf("You now this may llamas: %i\n", c);
+    printf("You now this may llamas: %f\n", c);
 }
