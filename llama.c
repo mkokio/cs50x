@@ -9,7 +9,7 @@ int main(void)
 {
     string current_llamas = get_string("How many llamas do you have? ");
     string needed_llamas = get_string("How many llamas do you need? ");
-    int years;
+    for (int y = 0; y < )
 
 
 
