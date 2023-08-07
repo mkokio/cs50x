@@ -14,7 +14,7 @@ int main(void)
     int n;
     do
     {
-        get_int("How many llamas do you need? ");
+        n = get_int("How many llamas do you need? ");
     }
     while (n < c);
 
