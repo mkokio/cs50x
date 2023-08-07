@@ -8,7 +8,12 @@
 int main(void)
 {
     //current llamas
-    int c = get_int("How many llamas do you have? ");
+    int c;
+    do
+    {
+        c = get_int("How many llamas do you have? ");
+    }
+    while (c > 9);
 
     //needed llamas
     int n;
