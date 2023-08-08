@@ -50,21 +50,21 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     // Done
-    int number_of_quarters = (cents - (cents%25))/25;
+    int number_of_quarters = (cents - (cents % 25)) / 25;
     return number_of_quarters;
 }
 
 int calculate_dimes(int cents)
 {
     // Done
-    int number_of_dimes = (cents - (cents%10))/10;
+    int number_of_dimes = (cents - (cents % 10)) / 10;
     return number_of_dimes;
 }
 
 int calculate_nickels(int cents)
 {
     // Done
-    int number_of_nickels = (cents - (cents%5))/5;
+    int number_of_nickels = (cents - (cents % 5)) / 5;
     return number_of_nickels;
 }
 
