@@ -49,15 +49,16 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
-    // TODO
-    int change_after_quarters = cents%25
-    return 0;
+    // Done
+    int number_of_quarters = (cents - (cents%25))/25;
+    return number_of_quarters;
 }
 
 int calculate_dimes(int cents)
 {
-    // TODO
-    return 0;
+    /// Done
+    int number_of_quarters = (cents - (cents%25))/25;
+    return number_of_quarters;
 }
 
 int calculate_nickels(int cents)
