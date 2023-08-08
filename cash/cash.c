@@ -37,7 +37,7 @@ int main(void)
 
 int get_cents(void)
 {
-    // TODO
+    // Done
     int c;
     do
     {
@@ -50,6 +50,7 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     // TODO
+    int change_after_quarters = cents%25
     return 0;
 }
 
