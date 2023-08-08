@@ -56,19 +56,19 @@ int calculate_quarters(int cents)
 
 int calculate_dimes(int cents)
 {
-    /// Done
-    int number_of_quarters = (cents - (cents%25))/25;
-    return number_of_quarters;
+    // Done
+    int number_of_dimes = (cents - (cents%10))/10;
+    return number_of_dimes;
 }
 
 int calculate_nickels(int cents)
 {
-    // TODO
-    return 0;
+    // Done
+    int number_of_nickels = (cents - (cents%5))/5;
+    return number_of_nickels;
 }
 
 int calculate_pennies(int cents)
 {
-    // TODO
-    return 0;
+    return cents;
 }
