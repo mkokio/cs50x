@@ -3,14 +3,13 @@
 
 int main(void)
 {
-    //prompt for 1 to 8
+    // Prompt for 1 to 8
     int h;
     do
     {
         h = get_int("Height: ");
     }
     while (h < 1 || h > 8);
-
 
     // Do this each row
     for (int r = 0; r < h; r++)
