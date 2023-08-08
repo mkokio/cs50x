@@ -12,14 +12,16 @@ int main(void)
     while (h < 1 || h > 8);
 
 
+    // Do this each row
     for (int r = 0; r < h; r++)
     {
-        //do this each row
+        // Print (height - row number) spaces
         for (int s = h - r - 1; s > 0; s--)
         {
             printf(".");
         }
-        for (int b = r; b < h; b++)
+        // Print (row number) of blocks
+        for (int b = 0; b < r; b++)
         {
             printf("#");
         }
