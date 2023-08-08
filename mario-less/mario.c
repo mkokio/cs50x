@@ -18,10 +18,11 @@ int main(void)
         for (int s = h - r - 1; s > 0; s--)
         {
             printf(".");
-
         }
-        
-
+        for (int b = 0; b < h; b++)
+        {
+            printf("#");
+        }
         printf("\n");
     }
 }
