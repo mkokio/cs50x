@@ -15,13 +15,15 @@ int main(void)
     // Do this each row
     for (int r = 0; r < h; r++)
     {
+
         // Print (height - row number) spaces
         for (int s = h - r - 1; s > 0; s--)
         {
-            printf(".");
+            printf(" ");
         }
+
         // Print (row number) of blocks
-        for (int b = 0; b < r; b++)
+        for (int b = 0; b < r + 1; b++)
         {
             printf("#");
         }
