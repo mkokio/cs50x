@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-const N = 3; //the length of your array; how many numbers do you want the average of?
+const int N = 3; //the length of your array; how many numbers do you want the average of?
 
 int get_average(int length, int array[]);
 
@@ -19,5 +19,9 @@ int main (void)
 int get_average(int length, int array[]);
 {
     int sum = 0;
-    for (int i = 0, )
+    for (int i = 0; i < length; i++)
+    {
+        sum += array[i];
+    }
+    return sum / (float) length;
 }
