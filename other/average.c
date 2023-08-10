@@ -8,10 +8,10 @@ int get_average(int length, int array[]);
 int main (void)
 {
     int numbers[N];
-    printf("Let's get the average of %i numbers.\n", N)
+    printf("Let's get the average of %i numbers.\n", N);
     for(int i; i < N; i++)
     {
-        numbers[i] = get_int("Write a number: ")
+        numbers[i] = get_int("Write a number: ");
     }
     printf("The average of the %i numbers is: %f\n", N, get_average(N, numbers))
 }
