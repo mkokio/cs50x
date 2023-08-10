@@ -16,7 +16,7 @@ int main (void)
     printf("The average of the %i numbers is: %d\n", N, get_average(N, numbers));
 }
 
-int get_average(int length, int array[]);
+int get_average(int length, int array[])
 {
     int sum = 0;
     for (int i = 0; i < length; i++)
