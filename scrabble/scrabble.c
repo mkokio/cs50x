@@ -40,7 +40,7 @@ int main(void)
 int compute_score(string word) //word is 'ab' for example
 {
     // TODO: Compute and return score for string
-    int score;
+    int score = 0;
     int n = 0;
     while (word[n] != '\0')
     {
