@@ -1,5 +1,5 @@
 #include <cs50.h>
-#include <stdlib.h>
+#include <stdlib.h> // int atoi(string s);
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
@@ -40,6 +40,7 @@ int main(int argc, string argv[])
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
+    int wordatoi(argv[1]);
     if ()
 
     // open correct file, each file has exactly LISTSIZE words
