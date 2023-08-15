@@ -120,6 +120,7 @@ string get_guess(int wordsize)
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
+    /*
     do
     {
         string guess = get_string("Input a %i-letter word: \n", wordsize)
@@ -128,7 +129,7 @@ string get_guess(int wordsize)
     {
         n++
     }
-
+    */
     return guess;
 }
 
