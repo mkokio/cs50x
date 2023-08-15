@@ -120,16 +120,12 @@ string get_guess(int wordsize)
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
-    /*
-    do
-    {
-        string guess = get_string("Input a %i-letter word: \n", wordsize)
-    }
+    int n = 0;
     while (guess[n] != '\0')
     {
-        n++
+        n++;
     }
-    */
+    if (n != wordsize)
     return guess;
 }
 
