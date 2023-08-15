@@ -54,9 +54,9 @@ int count_words(string text)
 {
     int n = 0;
     int word_count = 0;
-    while (text[n] != "\0")
+    while (text[n] != '\0')
     {
-        if (text[n] == " ")
+        if (text[n] == ' ')
         {
             word_count++;
         }
@@ -69,7 +69,7 @@ int count_sentences(string text)
 {
     int n = 0;
     int sent_count = 0;
-    while (text[n] != "\0")
+    while (text[n] != '\0')
     {
         if (text[n] == '.' || text[n] == '!' || text[n] == '?')
         {
