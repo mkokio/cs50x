@@ -15,7 +15,7 @@ int main(void)
     string text = get_string("Text: ");
 
     //count number of letters (a-z & A-Z)
-    character_count = count_letters(text);
+    int character_count = count_letters(text);
 
     //count number of words (separated by a space)
 
