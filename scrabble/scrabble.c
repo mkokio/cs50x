@@ -47,7 +47,10 @@ int compute_score(string word)
         word[0] += 32;
     }
     //ignore non letters
-    
+    if (word[0] >= 0 && word[0] <= 64)
+    {
+        word[0] += 32;
+    }
 
 
     int n = 0;
