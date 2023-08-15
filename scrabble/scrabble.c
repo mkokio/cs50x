@@ -16,11 +16,10 @@ int main(void)
 
     // Score both words
     int score1 = compute_score(word1);
-    printf("\n"); //delete before submitting
     int score2 = compute_score(word2);
-    printf("\n"); //delete before submitting
-    printf("Score 1: %i\n", score1); //delete before submit
-    printf("Score 2: %i\n", score2); //delete before submit
+
+    // printf("Score 1: %i\n", score1);
+    // printf("Score 2: %i\n", score2);
 
     // TODO: Print the winner
     if (score1 > score2)
@@ -37,7 +36,7 @@ int main(void)
     }
 }
 
-int compute_score(string word) //word is 'ab' for example
+int compute_score(string word)
 {
     // TODO: Compute and return score for string
     int points = 0;
@@ -49,23 +48,23 @@ int compute_score(string word) //word is 'ab' for example
         if (word[n] >= 65 && word[n] <= 90)
         {
             word[n] += (32 - 97);
-            printf("%i letter is uppercase, ", n); //delete later
+            // printf("%i letter is uppercase, ", n);
         }
         //use lowercase minus 97 to match real alphabet position
         else if (word[n] >= 97 && word[n] <= 122)
         {
             word[n] -= 97;
-            printf("%i letter is lowercase, ", n); //delete later
+            // printf("%i letter is lowercase, ", n);
         }
         //ignore non letters
         else
         {
             word[n] = 26; //set score of that letter to position 26 which is worth zero
-            printf("%i letter is not a letter, ", n); //delete later
+            // printf("%i letter is not a letter, ", n);
         }
         int position = word[n];
         points = POINTS[position];
-        printf("and it is in %i position, so worth this much: %i\n", position, points);
+        //printf("and it is in %i position, so worth this much: %i\n", position, points);
         n ++;
         score += points;
     }
