@@ -47,19 +47,19 @@ int compute_score(string word) //word is 'ab' for example
         if (word[n] >= 65 && word[n] <= 90)
         {
             word[n] += (32 - 97);
-            printf("%i letter is uppercase, " n); //delete later
+            printf("%i letter is uppercase, ", n); //delete later
         }
         //use lowercase minus 97 to match real alphabet position
         else if (word[n] >= 97 && word[n] <= 122)
         {
             word[n] -= 97;
-            printf("%i letter is lowercase, " n); //delete later
+            printf("%i letter is lowercase, ", n); //delete later
         }
         //ignore non letters
         else
         {
             word[n] = 26; //set score of that letter to position 26 which is worth zero
-            printf("%i letter is not a letter, " n); //delete later
+            printf("%i letter is not a letter, ", n); //delete later
         }
         int position = word[n];
         score = POINTS[position];
