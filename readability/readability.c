@@ -80,3 +80,8 @@ int count_sentences(string text)
     }
     return sent_count;
 }
+
+void reading_level(int c, int w, int s);
+{
+    
+}
