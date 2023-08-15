@@ -10,7 +10,7 @@ int compute_score(string word);
 
 int main(void)
 {
-    char word[] = "2";
+    char word[] = "b";
 
     //convert uppercase to lowercase (add 32) and minus 97 to match real alphabet position
     if (word[0] >= 65 && word[0] <= 90)
@@ -27,5 +27,6 @@ int main(void)
     {
         word[0] = 0; //set score of that letter to zero
     }
-    printf("%i\n", word[0]);
+    int position = word[0];
+    printf("%i\n", POINTS[position]);
 }
