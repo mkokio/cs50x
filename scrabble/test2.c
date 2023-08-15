@@ -34,7 +34,7 @@ int main(void)
         word[0] -= 97;
     }
     //ignore non letters
-    else (word[0] >= 123)
+    else
     {
         word[0] = 0;
     }
