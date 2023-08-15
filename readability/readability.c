@@ -31,10 +31,6 @@ int main(void)
     // X can be "Before Grade 1", 1 to 16, or "16+"
     reading_level(character_count, word_count, sentence_count);
 
-    //delete before submit
-    printf("Characters: %i\n", character_count);
-    printf("Words: %i\n", word_count);
-    printf("Sentences: %i\n", sentence_count);
 }
 
 int count_letters(string text)
