@@ -87,9 +87,16 @@ void reading_level(int c, int w, int s)
     double L = c / w * 100;
     double S = w / s * 100;
     int index = (int)round(0.0588 * L - 0.296 * S - 15.8);
-    printf("level: %i\n", index);
+    if (index < 1);
+    {
+        print("Before Grade 1.\n");
+    }
+    else if (index > 15)
+    {
+        print("Grade 16+.\n")
+    }
+    else
+    {
+        print("Grade %i\n", index)
+    }
 }
-
-//index = 0.0588 * L - 0.296 * S - 15.8
-//where L is the average number of letters per 100 words in the text,
-//and S is the average number of sentences per 100 words in the text.
