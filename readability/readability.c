@@ -31,7 +31,7 @@ int count_letters(string text)
     int n = 0;
     int char_count = 0;
     int sentence_count = 0;
-    while (text[n] != '\0' && text[n] != '.' && text[n] != '!' && text[n] != '?')
+    while (text[n] != '\0')
     {
         if (isalpha(text[n]))
         {
@@ -41,3 +41,7 @@ int count_letters(string text)
     }
     return char_count;
 }
+
+
+
+// && text[n] != '.' && text[n] != '!' && text[n] != '?'
