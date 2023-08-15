@@ -63,10 +63,9 @@ int compute_score(string word) //word is 'ab' for example
             printf("%i letter is not a letter, ", n); //delete later
         }
         int position = word[n];
-        score = POINTS[position];
+        score += POINTS[position];
         printf("and it is in %i position, so worth this much: %i\n", position, score);
         n ++;
-        score ++;
     }
 
     return score;
