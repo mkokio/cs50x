@@ -5,12 +5,15 @@
 // L is average number of letters per 100 words
 // S is average number of sentences per 100 words in the text
 
+int count_letters(string text);
+
 int main(void)
 {
     //prompt user for input
     string text = get_string("Text: ");
 
     //count number of letters (a-z & A-Z)
+    count_letters(text);
 
     //count number of words (separated by a space)
 
@@ -20,3 +23,5 @@ int main(void)
     // X can be "Before Grade 1", 1 to 16, or "16+"
 
 }
+
+int count_letters(string text);
