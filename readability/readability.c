@@ -27,6 +27,7 @@ int main(void)
 int count_letters(string text)
 {
     int n = 0;
+
     while (text[n] != "." || text[n] != "!" || text[n] != "?")
     {
         n++;
