@@ -50,6 +50,11 @@ int count_letters(string text)
     return char_count;
 }
 
+int count_words(string text)
+{
+    return word_
+}
+
 int count_sentences(string text)
 {
     int n = 0;
