@@ -38,7 +38,8 @@ int compute_score(string word)
     // TODO: Compute and return score for string
     int score;
 
-    word[0]
+    word[0] //first letter of our word
+    
 
     return score
 }
