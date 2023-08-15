@@ -11,7 +11,8 @@ int compute_score(string word);
 
 int main(void)
 {
-    string word = "cow";
-    printf("%i\n", word[0]);
+    string word = "ab";
+    int sum_of_ascii_code = word[0] + word[1];
+    printf("%i\n", sum_of_ascii_code);
 }
 
