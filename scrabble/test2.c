@@ -11,12 +11,7 @@ int compute_score(string word);
 
 int main(void)
 {
-    string word = "g";
-    int sum_of_ascii_code = word[0] - 97;
-    printf("%i\n", sum_of_ascii_code);
-}
-
-word[0] //first letter of our word
+    string word = "banana";
 
     //convert fully to lowercase
     if (word[0] >= 60 && word[0] <= 90)
@@ -38,3 +33,9 @@ word[0] //first letter of our word
     {
         word[0] = 0;
     }
+    else
+    {
+        word[0] -= 97;
+    }
+    printf("%i\n", word[0]);
+}
