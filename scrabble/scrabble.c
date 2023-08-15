@@ -42,10 +42,12 @@ int compute_score(string word)
     word[0] //first letter of our word
 
     //convert fully to lowercase
-    if (word[0] < 91)
+    if (word[0] >= 60 && word[0] <= 90)
     {
         word[0] += 32;
     }
+    //ignore non letters
+    
 
 
     int n = 0;
