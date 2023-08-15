@@ -41,7 +41,7 @@ int main(int argc, string argv[])
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
     wordsize = (int) atoi(argv[1]);
-    printf("%i\n", wordsize);
+    if wordsize
 
 
     // open correct file, each file has exactly LISTSIZE words
