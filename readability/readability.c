@@ -10,6 +10,7 @@
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
+void reading_level(int c, int w, int s);
 
 int main(void)
 {
@@ -27,7 +28,7 @@ int main(void)
 
     //print result "Grade X" rounded to nearest integer.
     // X can be "Before Grade 1", 1 to 16, or "16+"
-
+    reading_level(character_count, word_count, sentence_count);
 
     //delete before submit
     printf("Characters: %i\n", character_count);
