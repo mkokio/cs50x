@@ -32,14 +32,15 @@ int main(int argc, string argv[])
 {
     // ensure proper usage
     // TODO #1
+    int wordsize = 0;
     if (strcmp(argv[argc-1], argv[0]) == 0)
     {
         printf("Usage: %s wordsize\n", argv[0]);
     }
-    int wordsize = 0;
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
+    
 
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
