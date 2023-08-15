@@ -11,8 +11,30 @@ int compute_score(string word);
 
 int main(void)
 {
-    string word = "ab";
-    int sum_of_ascii_code = word[0] + word[1];
+    string word = "g";
+    int sum_of_ascii_code = word[0] - 97;
     printf("%i\n", sum_of_ascii_code);
 }
 
+word[0] //first letter of our word
+
+    //convert fully to lowercase
+    if (word[0] >= 60 && word[0] <= 90)
+    {
+        word[0] += 32 - 97;
+    }
+    //ignore non letters
+    elif if (word[0] >= 0 && word[0] <= 64)
+    {
+        word[0] = 0;
+    }
+    //ignore non letters
+    elif if (word[0] >= 91 && word[0] <= 96)
+    {
+        word[0] = 0;
+    }
+    //ignore non letters
+    elif if (word[0] >= 123)
+    {
+        word[0] = 0;
+    }

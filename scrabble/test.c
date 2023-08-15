@@ -25,7 +25,7 @@ int compute_score(string word)
     //convert fully to lowercase
     if (word[0] >= 60 && word[0] <= 90)
     {
-        word[0] += 32;
+        word[0] += 32 - 97;
     }
     //ignore non letters
     elif if (word[0] >= 0 && word[0] <= 64)
