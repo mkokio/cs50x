@@ -85,9 +85,9 @@ int count_sentences(string text)
 
 void reading_level(int c, int w, int s)
 {
-    float L = c / w * 100;
-    float S = s / w * 100;
-    float index = (0.0588 * L - 0.296 * S - 15.8);
+    double L = c / w * 100;
+    double S = s / w * 100;
+    double index = (0.0588 * L - 0.296 * S - 15.8);
     printf("CALCULATED INDEX: %f\n", index);
     if (index < 1)
     {
