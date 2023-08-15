@@ -92,7 +92,7 @@ void reading_level(int c, int w, int s)
     {
         printf("Before Grade 1\n");
     }
-    else if
+    else if (index)
     {
         printf("Grade %i\n", index);
     }
