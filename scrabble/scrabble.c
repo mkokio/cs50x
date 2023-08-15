@@ -16,6 +16,7 @@ int main(void)
 
     // Score both words
     int score1 = compute_score(word1);
+    printf("\n"); //delete before submitting
     int score2 = compute_score(word2);
 
     printf("Score 1: %i\n", score1); //delete before submit
