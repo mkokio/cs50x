@@ -29,14 +29,16 @@ int main(void)
 int count_letters(string text)
 {
     int n = 0;
+    int char_count = 0;
 
     while (text[n] != '\0' && text[n] != '.' && text[n] != '!' && text[n] != '?')
     {
         if (isalpha(text[n]))
         {
-            n++;
+            char_count++;
         }
+        n++;
     }
-    printf("This many characters before the end: %i\n", n);
-    return n;
+    printf("This many letters before the end: %i\n", char_count);
+    return char_count;
 }
