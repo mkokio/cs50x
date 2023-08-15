@@ -4,13 +4,13 @@
 #include <string.h>
 
 // Points assigned to each letter of the alphabet
-int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10, 0};
 
 int compute_score(string word);
 
 int main(void)
 {
-    char word[] = "z";
+    char word[] = "2";
 
     //convert uppercase to lowercase (add 32) and minus 97 to match real alphabet position
     if (word[0] >= 65 && word[0] <= 90)
@@ -25,7 +25,7 @@ int main(void)
     //ignore non letters
     else
     {
-        word[0] = 0; //set score of that letter to zero*****
+        word[0] = 26; //set score of that letter to position 26 which is worth zero
     }
     int position = word[0];
     printf("%i\n", POINTS[position]);
