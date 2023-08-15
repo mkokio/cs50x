@@ -92,12 +92,13 @@ void reading_level(int c, int w, int s)
     {
         printf("Before Grade 1\n");
     }
-    else if (index > 15)
-    {
-        printf("Grade 16+\n");
-    }
-    else
+    else if
     {
         printf("Grade %i\n", index);
     }
+    else (index > 15)
+    {
+        printf("Grade 16+\n");
+    }
+
 }
