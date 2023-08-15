@@ -124,7 +124,7 @@ string get_guess(int wordsize)
     {
         string guess = get_string("Input a %i-letter word: \n", wordsize)
     }
-    while 
+    while (guess[n] != '\0')
 
     return guess;
 }
