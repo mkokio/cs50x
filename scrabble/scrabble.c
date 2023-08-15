@@ -36,7 +36,7 @@ int main(void)
     }
 }
 
-int compute_score(string word)
+int compute_score(string word) //word is 'ab' for example
 {
     // TODO: Compute and return score for string
     int score;
