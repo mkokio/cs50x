@@ -24,7 +24,8 @@ int check_word(string guess, int wordsize, int status[], string choice);
 void print_word(string guess, int wordsize, int status[]);
 
 int main(int argc, string argv[])
-// argc means argument count
+// argc means argument count (note: ./program_name counts as one)
+// argv[] means vector (same a array)
 
 {
     // ensure proper usage
