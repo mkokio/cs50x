@@ -38,7 +38,11 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     int score;
-    
+    //convert fully to lowercase
+    for (int i = 0; i < n; i++)
+    {
+        
+    }
 
     word[0] //first letter of our word
     int n = 0;
