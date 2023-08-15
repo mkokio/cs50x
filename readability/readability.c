@@ -87,16 +87,16 @@ void reading_level(int c, int w, int s)
     double L = c / w * 100;
     double S = w / s * 100;
     int index = (int)round(0.0588 * L - 0.296 * S - 15.8);
-    if (index < 1);
+    if (index < 1)
     {
-        print("Before Grade 1.\n");
+        printf("Before Grade 1.\n");
     }
     else if (index > 15)
     {
-        print("Grade 16+.\n")
+        printf("Grade 16+.\n");
     }
     else
     {
-        print("Grade %i\n", index)
+        printf("Grade %i\n", index);
     }
 }
