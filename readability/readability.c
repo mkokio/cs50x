@@ -39,6 +39,5 @@ int count_letters(string text)
         }
         n++;
     }
-    printf("This many letters before the end: %i\n", char_count);
     return char_count;
 }
