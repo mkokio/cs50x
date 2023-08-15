@@ -39,28 +39,30 @@ int compute_score(string word)
     // TODO: Compute and return score for string
     int score;
 
-    word[0] //first letter of our word
-
-    //convert fully to lowercase
-    if (word[0] >= 60 && word[0] <= 90)
-    {
-        word[0] += 32;
-    }
-    //ignore non letters
-    if (word[0] >= 0 && word[0] <= 64)
-    {
-        word[0] += 32;
-    }
-
+char word[] = "2";
 
     int n = 0;
-
-    do
+    while (word[n] != '\0')
     {
-        n++;
+        //convert uppercase to lowercase (add 32) and minus 97 to match real alphabet position
+        if (word[n] >= 65 && word[n] <= 90)
+        {
+            word[n] += (32 - 97);
+        }
+        //use lowercase minus 97 to match real alphabet position
+        else if (word[n] >= 97 && word[n] <= 122)
+        {
+            word[n] -= 97;
+        }
+        //ignore non letters
+        else
+        {
+            word[n] = 26; //set score of that letter to position 26 which is worth zero
+        }
+        int position = word[n];
+        score = POINTS[position];
+        score ++;
+    n ++;
     }
-    while (word[0] != ALPHABET[n]);
-
-
     return score
 }
