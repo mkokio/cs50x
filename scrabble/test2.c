@@ -13,29 +13,30 @@ int main(void)
 {
     string word = "banana";
 
-    //convert fully to lowercase
-    if (word[0] >= 60 && word[0] <= 90)
-    {
-        word[0] += 32 - 97;
-    }
     //ignore non letters
-    else if (word[0] >= 0 && word[0] <= 64)
+    if (word[0] >= 0 && word[0] <= 64)
     {
         word[0] = 0;
+    }
+    //convert uppercase to lowercase and minus 97 to match real alphabet position
+    else if (word[0] >= 65 && word[0] <= 90)
+    {
+        word[0] += 32 - 97;
     }
     //ignore non letters
     else if (word[0] >= 91 && word[0] <= 96)
     {
         word[0] = 0;
     }
-    //ignore non letters
-    else if (word[0] >= 123)
-    {
-        word[0] = 0;
-    }
-    else
+    //use lowercase minus 97 to match real alphabet position
+    else if (word[0] >= 97 && word[0] <= 122)
     {
         word[0] -= 97;
+    }
+    //ignore non letters
+    else (word[0] >= 123)
+    {
+        word[0] = 0;
     }
     printf("%i\n", word[0]);
 }
