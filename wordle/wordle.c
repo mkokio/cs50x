@@ -25,7 +25,7 @@ void print_word(string guess, int wordsize, int status[]);
 
 int main(int argc, string argv[])
 // argc means argument count (note: ./program_name counts as one)
-// argv[] means vector (same a array)
+// argv[] means vector (same a array) and elements are all STRINGS
 // first element (argv[0]) is, for example, ./program_name
 // last element is argv[argc-1]
 
