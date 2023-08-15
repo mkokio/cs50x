@@ -7,5 +7,16 @@
 
 int main(void)
 {
+    //prompt user for input
+    string text = get_string("Text: ");
+
+    //count number of letters (a-z & A-Z)
+
+    //count number of words (separated by a space)
+
+    //count number of sentences (period, exclamation or question mark)
+
+    //print result "Grade X" rounded to nearest integer.
+    // X can be "Before Grade 1", 1 to 16, or "16+"
 
 }
