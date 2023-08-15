@@ -39,7 +39,7 @@ int compute_score(string word)
     // TODO: Compute and return score for string
     int score;
     //convert fully to lowercase
-    for (int i = 0; i < n; i++)
+    if (int word[0] < 91)
     {
         
     }
