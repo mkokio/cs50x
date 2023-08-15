@@ -30,9 +30,9 @@ int main(void)
 
 
     //delete before submit
-    printf("Characters: %i", character_count);
-    printf("Words: %i", word_count);
-    printf("Sentences: %i", sentence_count);
+    printf("Characters: %i\n", character_count);
+    printf("Words: %i\n", word_count);
+    printf("Sentences: %i\n", sentence_count);
 }
 
 int count_letters(string text)
@@ -53,7 +53,7 @@ int count_letters(string text)
 int count_words(string text)
 {
     int n = 0;
-    int word_count = 0;
+    int word_count = 1;
     while (text[n] != '\0')
     {
         if (text[n] == ' ')
