@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <math.h>
 
 
 // index = 0.0588 * L - 0.296 * S - 15.8
@@ -83,5 +84,5 @@ int count_sentences(string text)
 
 void reading_level(int c, int w, int s);
 {
-    
+
 }
