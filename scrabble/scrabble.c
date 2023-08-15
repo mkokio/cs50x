@@ -47,6 +47,7 @@ int compute_score(string word) //word is 'ab' for example
         if (word[n] >= 65 && word[n] <= 90)
         {
             word[n] += (32 - 97);
+            printf("%i letter is uppercase, position is %i\n", n, );
         }
         //use lowercase minus 97 to match real alphabet position
         else if (word[n] >= 97 && word[n] <= 122)
