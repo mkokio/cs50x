@@ -40,8 +40,9 @@ int main(void)
 int compute_score(string word) //word is 'ab' for example
 {
     // TODO: Compute and return score for string
-    int score = 0;
+    int points = 0;
     int n = 0;
+    int score = 0;
     while (word[n] != '\0')
     {
         //convert uppercase to lowercase (add 32) and minus 97 to match real alphabet position
@@ -63,9 +64,10 @@ int compute_score(string word) //word is 'ab' for example
             printf("%i letter is not a letter, ", n); //delete later
         }
         int position = word[n];
-        score += POINTS[position];
-        printf("and it is in %i position, so worth this much: %i\n", position, score);
+        points = POINTS[position];
+        printf("and it is in %i position, so worth this much: %i\n", position, points);
         n ++;
+        score += points;
     }
 
     return score;
