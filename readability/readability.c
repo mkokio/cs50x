@@ -27,6 +27,11 @@ int main(void)
     //count number of sentences (period, exclamation or question mark)
     int sentence_count = count_sentences(text);
 
+    //delete before submit
+    printf("Characters: %i\n", character_count);
+    printf("Words: %i\n", word_count);
+    printf("Sentences: %i\n", sentence_count);
+
     //print result "Grade X" rounded to nearest integer.
     // X can be "Before Grade 1", 1 to 16, or "16+"
     reading_level(character_count, word_count, sentence_count);
