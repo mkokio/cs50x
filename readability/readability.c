@@ -30,9 +30,9 @@ int count_letters(string text)
 {
     int n = 0;
 
-    while (text[n] != "." || text[n] != "!" || text[n] != "?")
+    while (text[n] != '.' || text[n] != '!' || text[n] != '?')
     {
-        if (isalpha())
+        if (isalpha(text[n]))
         {
             n++;
         }
