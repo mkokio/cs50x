@@ -13,20 +13,10 @@ int main(void)
 {
     string word = "banana";
 
-    //ignore non letters
-    if (word[0] >= 0 && word[0] <= 64)
+    //convert uppercase to lowercase (add 32) and minus 97 to match real alphabet position
+    if (word[0] >= 65 && word[0] <= 90)
     {
-        word[0] = 0;
-    }
-    //convert uppercase to lowercase and minus 97 to match real alphabet position
-    else if (word[0] >= 65 && word[0] <= 90)
-    {
-        word[0] += 32 - 97;
-    }
-    //ignore non letters
-    else if (word[0] >= 91 && word[0] <= 96)
-    {
-        word[0] = 0;
+        word[0] += (32 - 97);
     }
     //use lowercase minus 97 to match real alphabet position
     else if (word[0] >= 97 && word[0] <= 122)
