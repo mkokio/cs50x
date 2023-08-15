@@ -24,7 +24,12 @@ int main(void)
 
 }
 
-int count_letters(string text);
+int count_letters(string text)
 {
-    
+    int n = 0;
+    while (text[n] != "." || text[n] != "!" || text[n] != "?")
+    {
+        n++;
+    }
+    printf("This many characters before the end: %i\n", n);
 }
