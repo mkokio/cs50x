@@ -24,6 +24,8 @@ int check_word(string guess, int wordsize, int status[], string choice);
 void print_word(string guess, int wordsize, int status[]);
 
 int main(int argc, string argv[])
+// argc means argument count
+
 {
     // ensure proper usage
     // TODO #1
@@ -79,7 +81,7 @@ int main(int argc, string argv[])
         int score = check_word(guess, wordsize, status, choice);
 
         printf("Guess %i: ", i + 1);
-        
+
         // Print the guess
         print_word(guess, wordsize, status);
 
