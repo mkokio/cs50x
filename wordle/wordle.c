@@ -35,6 +35,7 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
         printf("Usage: %s wordsize\n", argv[0]);
+        return 1;
     }
     int wordsize = 0;
 
@@ -44,6 +45,7 @@ int main(int argc, string argv[])
     if (k < 5 || k >8)
     {
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
+        return 1;
     }
 
 
