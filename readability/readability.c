@@ -32,7 +32,10 @@ int count_letters(string text)
 
     while (text[n] != "." || text[n] != "!" || text[n] != "?")
     {
-        n++;
+        if (isalpha())
+        {
+            n++;
+        }
     }
     printf("This many characters before the end: %i\n", n);
 }
