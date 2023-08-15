@@ -20,7 +20,7 @@ int main(void)
     int character_count = count_letters(text);
 
     //count number of words (separated by a space)
-    int space_count = count_words(text);
+    int word_count = count_words(text);
 
     //count number of sentences (period, exclamation or question mark)
     int sentence_count = count_sentences(text);
@@ -28,6 +28,11 @@ int main(void)
     //print result "Grade X" rounded to nearest integer.
     // X can be "Before Grade 1", 1 to 16, or "16+"
 
+
+    //delete before submit
+    printf("Characters: %i", character_count);
+    printf("Words: %i", word_count);
+    printf("Sentences: %i", sentence count);
 }
 
 int count_letters(string text)
@@ -49,9 +54,13 @@ int count_sentences(string text)
 {
     int n = 0;
     int sent_count = 0;
-    while (text[n] != '.' && text[n] != '!' && text[n] != '?')
+    while (text[n] != "\0")
     {
-        sent_count ++
+        if (text[n] == '.' || text[n] == '!' || text[n] == '?')
+        {
+            sent_count++;
+        }
+        n++;
     }
-    
+    return sent_count;
 }
