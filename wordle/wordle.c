@@ -32,10 +32,11 @@ int main(int argc, string argv[])
 {
     // ensure proper usage
     // TODO #1
+    bool usage(k);
     if (strcmp(argv[argc-1], argv[0]) == 0)
     {
         printf("Usage: %s wordsize\n", argv[0]);
-        
+
     }
     int wordsize = 0;
 
