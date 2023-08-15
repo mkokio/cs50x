@@ -1,12 +1,7 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
 #include <math.h>
-
-
-// index = 0.0588 * L - 0.296 * S - 15.8
-// L is average number of letters per 100 words
-// S is average number of sentences per 100 words in the text
+#include <stdio.h>
 
 int count_letters(string text);
 int count_words(string text);
@@ -15,27 +10,20 @@ void reading_level(int c, int w, int s);
 
 int main(void)
 {
-    //prompt user for input
+    // prompt user for input
     string text = get_string("Text: ");
 
-    //count number of letters (a-z & A-Z)
+    // count number of letters (a-z & A-Z)
     int character_count = count_letters(text);
 
-    //count number of words (separated by a space)
+    // count number of words (separated by a space)
     int word_count = count_words(text);
 
-    //count number of sentences (period, exclamation or question mark)
+    // count number of sentences (period, exclamation or question mark)
     int sentence_count = count_sentences(text);
 
-    //delete before submit
-    //printf("Characters: %i\n", character_count);
-    //printf("Words: %i\n", word_count);
-    //printf("Sentences: %i\n", sentence_count);
-
-    //print result "Grade X" rounded to nearest integer.
-    // X can be "Before Grade 1", 1 to 16, or "16+"
+    // calculate reading level
     reading_level(character_count, word_count, sentence_count);
-
 }
 
 int count_letters(string text)
@@ -85,21 +73,20 @@ int count_sentences(string text)
 
 void reading_level(int c, int w, int s)
 {
-    double L = c / (float)w * 100;
-    double S = s / (float)w * 100;
+    double L = c / (float) w * 100;
+    double S = s / (float) w * 100;
     double index = (0.0588 * L - 0.296 * S - 15.8);
-    //printf("CALCULATED INDEX: %f\n", index);
+
     if (index < 2)
     {
         printf("Before Grade 1\n");
     }
     else if (index >= 2 && index < 16)
     {
-        printf("Grade %i\n", (int)round(index));
+        printf("Grade %i\n", (int) round(index));
     }
     else
     {
         printf("Grade 16+\n");
     }
-
 }
