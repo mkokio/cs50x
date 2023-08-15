@@ -42,10 +42,11 @@ int compute_score(string word)
     word[0] //first letter of our word
     int n = 0;
 
-    hile (word[0] != ALPHABET[n])
+    do
     {
         n++;
     }
+    while (word[0] != ALPHABET[n]);
 
 
     return score
