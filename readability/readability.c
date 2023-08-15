@@ -84,7 +84,7 @@ int count_sentences(string text)
 
 void reading_level(int c, int w, int s)
 {
-    int L = 
+    int L = c / w * 
 }
 
 //index = 0.0588 * L - 0.296 * S - 15.8
