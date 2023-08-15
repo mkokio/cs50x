@@ -37,6 +37,6 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     int score;
-    word
+    word[0]
     return score
 }
