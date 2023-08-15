@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -44,28 +44,28 @@ int compute_score(string word)
     int score = 0;
     while (word[n] != '\0')
     {
-        //convert uppercase to lowercase (add 32) and minus 97 to match real alphabet position
+        // convert uppercase to lowercase (add 32) and minus 97 to match real alphabet position
         if (word[n] >= 65 && word[n] <= 90)
         {
             word[n] += (32 - 97);
             // printf("%i letter is uppercase, ", n);
         }
-        //use lowercase minus 97 to match real alphabet position
+        // use lowercase minus 97 to match real alphabet position
         else if (word[n] >= 97 && word[n] <= 122)
         {
             word[n] -= 97;
             // printf("%i letter is lowercase, ", n);
         }
-        //ignore non letters
+        // ignore non letters
         else
         {
-            word[n] = 26; //set score of that letter to position 26 which is worth zero
+            word[n] = 26; // set score of that letter to position 26 which is worth zero
             // printf("%i letter is not a letter, ", n);
         }
         int position = word[n];
         points = POINTS[position];
-        //printf("and it is in %i position, so worth this much: %i\n", position, points);
-        n ++;
+        // printf("and it is in %i position, so worth this much: %i\n", position, points);
+        n++;
         score += points;
     }
 
