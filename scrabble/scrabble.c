@@ -42,7 +42,7 @@ int compute_score(string word)
     word[0] //first letter of our word
 
     //convert fully to lowercase
-    if (int word[0] < 91)
+    if (word[0] < 91)
     {
         word[0] += 32;
     }
