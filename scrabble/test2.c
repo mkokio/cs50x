@@ -10,7 +10,7 @@ int compute_score(string word);
 
 int main(void)
 {
-    char word[] = "b";
+    char word[] = "z";
 
     //convert uppercase to lowercase (add 32) and minus 97 to match real alphabet position
     if (word[0] >= 65 && word[0] <= 90)
