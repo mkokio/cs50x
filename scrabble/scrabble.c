@@ -18,14 +18,17 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
+    printf("Score 1: %i\n", score1); //delete before submit
+    printf("Score 2: %i\n", score2); //delete before submit
+
     // TODO: Print the winner
     if (score1 > score2)
     {
-        printf("Player 1 wins! (%i) \n", score1);
+        printf("Player 1 wins!\n");
     }
     else if (score2 > score1)
     {
-        printf("Player 2 wins! (%i )\n", score2);
+        printf("Player 2 wins!\n");
     }
     else
     {
