@@ -15,12 +15,12 @@ int main(void)
     //convert uppercase to lowercase (add 32) and minus 97 to match real alphabet position
     if (word[0] >= 65 && word[0] <= 90)
     {
-        word[0] += POINTS[(32 - 97)];
+        word[0] += (32 - 97);
     }
     //use lowercase minus 97 to match real alphabet position
     else if (word[0] >= 97 && word[0] <= 122)
     {
-        word[0] -= POINTS[97];
+        word[0] -= 97;
     }
     //ignore non letters
     else
