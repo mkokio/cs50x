@@ -12,6 +12,6 @@ int compute_score(string word);
 int main(void)
 {
     string word = "cow";
-    printf(word[0]);
+    printf("%i\n", word[0]);
 }
 
