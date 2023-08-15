@@ -19,17 +19,17 @@ int main(void)
         word[0] += 32 - 97;
     }
     //ignore non letters
-    elif if (word[0] >= 0 && word[0] <= 64)
+    else if (word[0] >= 0 && word[0] <= 64)
     {
         word[0] = 0;
     }
     //ignore non letters
-    elif if (word[0] >= 91 && word[0] <= 96)
+    else if (word[0] >= 91 && word[0] <= 96)
     {
         word[0] = 0;
     }
     //ignore non letters
-    elif if (word[0] >= 123)
+    else if (word[0] >= 123)
     {
         word[0] = 0;
     }
