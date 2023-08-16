@@ -153,7 +153,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
     {
         if (guess[x] == choice[x])
         {
-            
+            score += 2
         }
     }
     // HINTS
