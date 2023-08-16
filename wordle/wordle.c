@@ -161,7 +161,8 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 score += 2; //EXACT
                 status[x] = 2;
                 printf("Score is now %i. ", score);
-                printf("Status array: %i", status);
+                //current status
+                for (int g = 0; )
             }
             else if (guess[x])
         }
