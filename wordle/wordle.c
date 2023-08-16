@@ -130,7 +130,7 @@ string get_guess(int wordsize)
             n++;
         }
     }
-    while (n != wordsize);
+    while (n == wordsize);
     return guess;
 }
 
