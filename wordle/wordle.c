@@ -161,6 +161,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 score += 2; //EXACT
                 status[x] = 2;
                 printf("Score is now %i. ", score);
+                return 1;
 
             }
             //else if (guess[x])
