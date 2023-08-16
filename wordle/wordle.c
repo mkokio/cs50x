@@ -151,10 +151,11 @@ int check_word(string guess, int wordsize, int status[], string choice)
     // TODO #5
     for (int x = 0; guess[x] != '\0'; x++) // iterate over each letter of the guess DONE!
     {
-        if (guess[x] == choice[x])
-        {
-            score += 2
-        }
+        for (int y = 0; choice[y] != '\0'; y;;)
+            if (guess[x] == choice[x])
+            {
+                score += 2
+            }
     }
     // HINTS
     // iterate over each letter of the guess
