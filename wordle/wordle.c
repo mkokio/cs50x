@@ -122,13 +122,15 @@ string get_guess(int wordsize)
     // TODO #3
     int n = 0;
 
-    string guess = get_string("Input a %i-letter word: \n", wordsize)
-
-    while (guess[n] != '\0')
+    do
     {
-        n++;
+    string guess = get_string("Input a %i-letter word: \n", wordsize)
+        while (guess[n] != '\0')
+        {
+            n++;
+        }
     }
-    if (n != wordsize)
+    while (n != wordsize);
     return guess;
 }
 
