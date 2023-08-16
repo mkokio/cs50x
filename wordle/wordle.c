@@ -75,8 +75,6 @@ int main(int argc, string argv[])
     srand(time(NULL));
     string choice = options[rand() % LISTSIZE];
 
-    printf("\nSecret word, aka choice: %s\n", choice); //DELETE BEFORE SUBMIT
-
     // allow one more guess than the length of the word
     int guesses = wordsize + 1;
     bool won = false;
@@ -121,9 +119,12 @@ int main(int argc, string argv[])
     // TODO #7
     if (won)
     {
-        printf("You Won!")
+        printf("You Won!\n");
     }
     else
+    {
+        printf("The target word was %s\n", choice);
+    }
     // that's all folks!
     return 0;
 }
@@ -157,31 +158,23 @@ int check_word(string guess, int wordsize, int status[], string choice)
     // TODO #5
     for (int x = 0; guess[x] != '\0'; x++) // iterate over each letter of the guess DONE!
     {
-        printf("x is %i, guess[x] is %c. ", x, guess[x]);
         for (int y = 0; choice[y] != '\0'; y++) // iterate over each letter of the choice
         {
             if (guess[x] == choice[x]) // compare the current guess letter to the current choice letter
             {
                 score += 2; //EXACT
                 status[x] = 2;
-                printf("Score is now %i. ", score);
                 break;
             }
             if (guess[x] == choice[y])
             {
                 score += 1; //CLOSE
                 status[x] = 1;
-                printf("Score is now %i. ", score);
                 break;
             }
         }
-        //current status
-        for (int g = 0; g < wordsize; g++)
-        {
-            printf("%i", status[g]);
-        }
-        printf("\n");
     }
+    printf("\n");
     // HINTS
     // iterate over each letter of the guess
         // iterate over each letter of the choice
