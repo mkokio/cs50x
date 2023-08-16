@@ -193,7 +193,33 @@ void print_word(string guess, int wordsize, int status[])
 {
     // print word character-for-character with correct color coding, then reset terminal font to normal
     // TODO #6
-
-    printf("\n");
+    for (int x = 0; guess[x] != '\0'; x++) // iterate over each letter of the guess DONE!
+        {
+            printf("x is %i, guess[x] is %c. ", x, guess[x]);
+            for (int y = 0; choice[y] != '\0'; y++) // iterate over each letter of the choice
+            {
+                if (guess[x] == choice[x]) // compare the current guess letter to the current choice letter
+                {
+                    score += 2; //EXACT
+                    status[x] = 2;
+                    printf("Score is now %i. ", score);
+                    break;
+                }
+                if (guess[x] == choice[y])
+                {
+                    score += 1; //CLOSE
+                    status[x] = 1;
+                    printf("Score is now %i. ", score);
+                    break;
+                }
+            }
+            //current status
+            for (int g = 0; g < wordsize; g++)
+            {
+                printf("%i", status[g]);
+            }
+            printf("\n");
+        }
+    printf("\n"); \\original
     return;
 }
