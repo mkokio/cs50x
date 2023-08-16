@@ -162,7 +162,10 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 status[x] = 2;
                 printf("Score is now %i. ", score);
                 //current status
-                for (int g = 0; )
+                for (int g = 0; g < wordsize; g++)
+                {
+                    printf("%i", status[g]);
+                }
             }
             else if (guess[x])
         }
