@@ -149,7 +149,10 @@ int check_word(string guess, int wordsize, int status[], string choice)
 
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
-
+    for (int x = 0; guess[x] != '\0'; x++) // iterate over each letter of the guess
+    {
+        printf("%c\n", guess[x]);
+    }
     // HINTS
     // iterate over each letter of the guess
         // iterate over each letter of the choice
