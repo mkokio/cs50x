@@ -128,6 +128,7 @@ string get_guess(int wordsize)
 
     do
     {
+    n = 0;
     guess = get_string("Input a %i-letter word: \n", wordsize);
         while (guess[n] != '\0')
         {
