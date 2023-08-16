@@ -133,7 +133,7 @@ string get_guess(int wordsize)
     do
     {
     n = 0;
-    guess = get_string("Input a %i-letter word: \n", wordsize);
+    guess = get_string("Input a %i-letter word: ", wordsize);
         while (guess[n] != '\0')
         {
             n++;
@@ -152,12 +152,6 @@ int check_word(string guess, int wordsize, int status[], string choice)
 
     // HINTS
     // iterate over each letter of the guess
-    int z = 0
-    while (strcmp(guess[z], '/0'))
-    {
-
-        z++
-    }
         // iterate over each letter of the choice
             // compare the current guess letter to the current choice letter
                 // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
