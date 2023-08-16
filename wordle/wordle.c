@@ -133,10 +133,9 @@ string get_guess(int wordsize)
         while (guess[n] != '\0')
         {
             n++;
-            printf("%i\n", n);
         }
     }
-    while (n == wordsize);
+    while (n != wordsize); //keep prompting for the correct length while initial guess is not the same length as current game's wordsize
     return guess;
 }
 
