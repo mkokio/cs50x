@@ -174,7 +174,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
             }
         }
     }
-    
+
     // HINTS
     // iterate over each letter of the guess
         // iterate over each letter of the choice
@@ -190,7 +190,7 @@ void print_word(string guess, int wordsize, int status[])
 {
     // print word character-for-character with correct color coding, then reset terminal font to normal
     // TODO #6
-    for (int x = 0; guess[x] != '\0'; x++) // iterate over each letter of the guess DONE!
+    for (int x = 0; guess[x] != '\0'; x++)
     {
         if (status[x] == 0)
         {
