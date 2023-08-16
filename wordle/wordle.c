@@ -128,6 +128,7 @@ string get_guess(int wordsize)
         while (guess[n] != '\0')
         {
             n++;
+            printf("%i\n", n);
         }
     }
     while (n == wordsize);
