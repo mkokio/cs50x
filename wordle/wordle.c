@@ -158,9 +158,10 @@ int check_word(string guess, int wordsize, int status[], string choice)
         {
             if (guess[x] == choice[y])
             {
-                score += 2;
+                score += 2; //EXACT
                 printf("Score is now %i.", score);
             }
+            else if (guess[x])
         }
         printf("\n");
     }
