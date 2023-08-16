@@ -155,11 +155,13 @@ int check_word(string guess, int wordsize, int status[], string choice)
     {
         printf("x is %i, guess[x] is %c. \n", x, guess[x]);
         for (int y = 0; choice[y] != '\0'; y++)
+        {
             if (guess[x] == choice[y])
             {
                 score += 2;
                 printf("Score is now %i.\n", score);
             }
+        }
     }
     // HINTS
     // iterate over each letter of the guess
