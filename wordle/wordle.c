@@ -163,7 +163,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 printf("Score is now %i. ", score);
                 break;
             }
-            else if (guess[x] == choice[y])
+            if (guess[x] == choice[y])
             {
                 score += 1; //CLOSE
                 status[x] = 1;
