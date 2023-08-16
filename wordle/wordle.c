@@ -153,15 +153,16 @@ int check_word(string guess, int wordsize, int status[], string choice)
     // TODO #5
     for (int x = 0; guess[x] != '\0'; x++) // iterate over each letter of the guess DONE!
     {
-        printf("x is %i, guess[x] is %c. \n", x, guess[x]);
+        printf("x is %i, guess[x] is %c. ", x, guess[x]);
         for (int y = 0; choice[y] != '\0'; y++)
         {
             if (guess[x] == choice[y])
             {
                 score += 2;
-                printf("Score is now %i.\n", score);
+                printf("Score is now %i.", score);
             }
         }
+        printf("\n");
     }
     // HINTS
     // iterate over each letter of the guess
