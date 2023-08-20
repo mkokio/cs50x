@@ -14,8 +14,6 @@ int main(void)
     while (input[n] != '\0')
     {
         n++;
-        int x = input[n];
-        printf("DEC of the last digit is %i\n", x);
     }
     printf("Length of string: %i\n", n);
     //n is now the length of the string
