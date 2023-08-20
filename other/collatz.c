@@ -12,12 +12,11 @@ int main(void)
 
 void collatz(int n)
 {
-    int steps = 0;
     if (n == 1)
     {
-        printf("%i/n", steps);
+        return 0;
     }
-    else if (n/2 == 0)
+    else if ((n%2) == 0)
     {
         n = n/2;
         steps++;
