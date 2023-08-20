@@ -36,7 +36,7 @@ int convert(string input)
     //n is now the length of the string
 
     //Convert this char into its numeric value. Can you subtract some char to do this?
-
+    
 
     //Remove the last char from the string by moving the null terminator one position to the left.
 
