@@ -14,5 +14,8 @@ int collatz(int n)
     {
         //stop counting
     }
-    
+    else if (//even)
+    {
+
+    }
 }
