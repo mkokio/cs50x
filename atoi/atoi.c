@@ -27,7 +27,12 @@ int convert(string input)
 {
     // TODO
     //Start by getting the index of the last char in the string (the char before the \0).
-    for (int i = 0; )
+    int n = 0;
+    while (input[n] != '\0')
+    {
+        n++;
+    }
+    return n;
     //Convert this char into its numeric value. Can you subtract some char to do this?
 
     //Remove the last char from the string by moving the null terminator one position to the left.
