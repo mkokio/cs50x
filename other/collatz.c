@@ -17,16 +17,16 @@ int collatz(int n)
     {
         return steps;
     }
-    else if (//even)
+    else if (n/2 == 0)
     {
         n = n/2;
-        steps++
+        steps++;
     }
     else
     {
         n = 3 * n + 1;
-        steps++
+        steps++;
     }
-    collatz(n)
+    collatz(n);
 
 }
