@@ -5,7 +5,9 @@ int collatz(int n);
 
 int main(void)
 {
-    int = get_int("Type a whole number: ")
+    int input = get_int("Type a whole number: ");
+    int total_steps = collatz(input);
+    printf("Steps to get to 1: %i/n", total_steps);
 }
 
 int collatz(int n)
@@ -13,7 +15,7 @@ int collatz(int n)
     int steps = 0;
     if (n == 1)
     {
-        //stop counting
+        return steps;
     }
     else if (//even)
     {
@@ -25,5 +27,6 @@ int collatz(int n)
         n = 3 * n + 1;
         steps++
     }
-    
+    collatz(n)
+
 }
