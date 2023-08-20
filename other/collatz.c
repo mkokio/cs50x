@@ -13,19 +13,9 @@ int main(void)
 void collatz(int n)
 {
     if (n == 1)
-    {
         return 0;
-    }
     else if ((n%2) == 0)
-    {
-        n = n/2;
-        steps++;
-    }
+        collatz(n/2);
     else
-    {
-        n = 3 * n + 1;
-        steps++;
-    }
-    collatz(n);
-
+        collatz(3*n + 1);
 }
