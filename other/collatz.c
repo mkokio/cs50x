@@ -1,21 +1,21 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int collatz(int n);
+void collatz(int n);
 
 int main(void)
 {
     int input = get_int("Type a whole number: ");
-    int total_steps = collatz(input);
-    printf("Steps to get to 1: %i/n", total_steps);
+    collatz(input);
+    //printf("Steps to get to 1: %i/n", total_steps);
 }
 
-int collatz(int n)
+void collatz(int n)
 {
     int steps = 0;
     if (n == 1)
     {
-        return steps;
+        printf("%i/n", steps);
     }
     else if (n/2 == 0)
     {
