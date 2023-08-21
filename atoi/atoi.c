@@ -33,10 +33,13 @@ int convert(string input)
     {
         n++;
     }
+    printf("Length of string: %i\n", n);
     //n is now the length of the string
 
     //Convert this char into its numeric value. Can you subtract some char to do this?
-    
+    //Last character ASCII code is (int) input[n-1]
+    int real_integer = input[n-1] - 48;
+    printf("Real integer: %i\n", real_integer);
 
     //Remove the last char from the string by moving the null terminator one position to the left.
 
