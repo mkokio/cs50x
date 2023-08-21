@@ -10,6 +10,7 @@ int main() {
     // Create the command string
     snprintf(command, sizeof(command), "time %s %s", binary, filename);
     printf("%s",command);
-    //system(command);
+    string full_comand = (string) command;
+    system(command);
     return 0;
 }
