@@ -4,8 +4,6 @@
 #include <stdio.h>
 #include <string.h>
 
-int convert(string input);
-
 int main(void)
 {
     string input = get_string("Enter a positive integer: ");
@@ -19,8 +17,8 @@ int main(void)
     //n is now the length of the string
 
     //Convert this char into its numeric value. Can you subtract some char to do this?
-    int x = input[n];
-    printf("Last character is %c\n", x);
+    //int x = input[n];
+    //printf("Last character is %c\n", x);
 
     //Remove the last char from the string by moving the null terminator one position to the left.
 
