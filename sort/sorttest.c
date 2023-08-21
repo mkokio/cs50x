@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <cs50.h>
 
 int main() {
     printf("Running the compiled binary...\n");
-    system("./sort1"); // Replace "compiled_binary" with the actual binary name
+    string binary = "./sort1";
+    system("%s", binary); // Replace "compiled_binary" with the actual binary name
     printf("Finished running the compiled binary.\n");
 
     return 0;
