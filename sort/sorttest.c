@@ -12,6 +12,6 @@ int main() {
     //printf("%s",command);
     //string full_comand = (string) command;
     //system(command);
-    sytem(time)
+    system("time ./sort1 random5000.txt");
     return 0;
 }
