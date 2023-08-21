@@ -6,7 +6,11 @@ int main() {
     printf("Running the compiled binary...\n");
     string binary = "./sort1";
     string filename = "random5000.txt";
-    string command =
+    char command[50]; // Make sure the buffer is large enough
+
+    // Create the command string
+    snprintf(command, sizeof(command), "%s %s", binary, filename);
+
     system(command);
     printf("Finished running the compiled binary.\n");
 
