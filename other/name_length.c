@@ -12,5 +12,5 @@ int main(void)
         n++;
     }
     printf("\nYour name has this many letters! %i\n", n);
-    printf("Last character ASCII code is %i\n", name[n]);
+    printf("Last character ASCII code is %i\n", name[n-1]);
 }
