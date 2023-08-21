@@ -16,7 +16,7 @@ int main(void)
     //n is now the length of the string
 
     //Convert this char into its numeric value. Can you subtract some char to do this?
-    printf("Last character ASCII code is %i\n", input[n]);
+    printf("Last character ASCII code is %i\n", input[n-1]);
 
     //Remove the last char from the string by moving the null terminator one position to the left.
 
