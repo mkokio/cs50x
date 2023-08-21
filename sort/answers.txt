@@ -1,11 +1,11 @@
-sort1 uses: TODO
+sort1 uses: Selection Sort
 
-How do you know?: TODO
+How do you know?: Sorting the sorted list was very quick, while sorting reversed and random were slow.
 
 sort2 uses: Merge Sort
 
-How do you know?: Because it is fastest at sorting all of these files. And the difference 
+How do you know?: Because it is fastest at sorting all of these files. And the difference in speed for a group of 5000, 10000 or 50000 was small.
 
-sort3 uses: TODO
+sort3 uses: Bubble Sort
 
-How do you know?: TODO
+How do you know?: Sorting reversed was quite quick.
