@@ -3,8 +3,10 @@ sort1 uses: TODO
 How do you know?: TODO
 
 sort2 uses: TODO
+Merge Sort
 
 How do you know?: TODO
+Because it is fastest at sorting all of these files.
 
 sort3 uses: TODO
 
