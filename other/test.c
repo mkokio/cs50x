@@ -7,7 +7,6 @@
 int main(void)
 {
     string input = get_string("Enter a positive integer: ");
-
     int n = 0;
     while (input[n] != '\0')
     {
