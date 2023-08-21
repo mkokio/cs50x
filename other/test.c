@@ -17,6 +17,8 @@ int main(void)
 
     //Convert this char into its numeric value. Can you subtract some char to do this?
     printf("Last character ASCII code is %i\n", input[n-1]);
+    int real_integer = input[n-1] -48;
+    printf("Real integer: %i\n", real_integer);
 
     //Remove the last char from the string by moving the null terminator one position to the left.
 
