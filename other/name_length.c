@@ -11,5 +11,5 @@ int main(void)
         printf("%i ", name[n]);
         n++;
     }
-    printf("\nYour name has this many letters: %i\n", n);
+    printf("\nYour name has this many letters! %i\n", n);
 }
