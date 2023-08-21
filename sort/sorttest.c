@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <cs50.h>
+#include <sys/wait.h>
 
 int main() {
     //string binary = "./sort1";
@@ -12,6 +13,17 @@ int main() {
     //printf("%s",command);
     //string full_comand = (string) command;
     //system(command);
-    system("time ./sort1 random5000.txt");
-    return 0;
+    printf("Running the compiled binary...\n");
+    int result = system("time ./sort1 random5000.txt");
+
+    if (result == -1) {
+        perror("system");
+    } else {
+        int exitStatus = WEXITSTATUS(result);
+        printf("Command exited with status: %d\n", exitStatus);
+    }
+
+    printf("Finished running the compiled binary.\n");
+
+    return 0;    return 0;
 }
