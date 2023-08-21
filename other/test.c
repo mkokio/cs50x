@@ -21,6 +21,7 @@ int main(void)
     printf("Real integer: %i\n", real_integer);
 
     //Remove the last char from the string by moving the null terminator one position to the left.
+    while (input[])
 
     //Return this value plus 10 times the integer value of the new shortened string.
 
