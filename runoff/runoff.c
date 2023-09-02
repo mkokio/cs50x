@@ -129,7 +129,7 @@ bool vote(int voter, int rank, string name)
 {
     // TODO
     // look for a condidate called 'name'
-    
+    if
 
     // update preferences so they are the voter's rank prefence
 
