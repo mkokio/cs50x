@@ -134,8 +134,13 @@ bool vote(int voter, int rank, string name)
     {
         if (strcmp(*candidate[i].name, name) == 0)
         {
-            printf("name found\n")
+            printf("name found\n");
             // update preferences so they are the voter's rank prefence
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
