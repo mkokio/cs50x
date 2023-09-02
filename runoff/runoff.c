@@ -136,17 +136,12 @@ bool vote(int voter, int rank, string name)
         {
             printf("name found\n");
             // update preferences so they are the voter's rank prefence
+            
+            // and return true
             return true;
         }
-        else
-        {
-            return false;
-        }
     }
-
-
-    // and return true
-    return true;
+    return false;
 }
 
 // Tabulate votes for non-eliminated candidates
