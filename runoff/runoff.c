@@ -130,9 +130,15 @@ bool vote(int voter, int rank, string name)
 {
     // TODO
     // look for a candidate called 'name'
-    if (strcmp(candidate.name, name)) == 0)
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (strcmp(candidate[i].name, name)) == 0)
+        {
+            printf("name found\n")
+            // update preferences so they are the voter's rank prefence
+        }
+    }
 
-    // update preferences so they are the voter's rank prefence
 
     // and return true
     return false;
