@@ -130,7 +130,7 @@ bool vote(int voter, int rank, string name)
 {
     // TODO
     // look for a candidate called 'name'
-    if
+    if (strcmp(candidate.name, name)) == 0)
 
     // update preferences so they are the voter's rank prefence
 
