@@ -147,6 +147,11 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+    float majority = MAX_CANDIDATES/2
+    //loop through candidates, counting "true" votes
+
+    
+    //do it again
     return;
 }
 
@@ -154,6 +159,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    //do any have a majority vote?
     return false;
 }
 
