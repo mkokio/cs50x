@@ -136,7 +136,7 @@ bool vote(int voter, int rank, string name)
         {
             // update preferences so they are the voter's rank prefence
             candidates[preferences[i][0]].votes++;
-            printf("Voter '%i' preference has been set to %s./n", voter, prefences[voter][rank]);
+            printf("Voter '%i' preference has been set to %i.\n", voter, preferences[voter][rank]);
             // and return true
             return true;
         }
