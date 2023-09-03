@@ -135,9 +135,8 @@ bool vote(int voter, int rank, string name)
         if (strcmp(candidates[i].name, name) == 0)
         {
             // update preferences so they are the voter's rank prefence
-            candidates[preferences[i][0]].votes++;
-            printf("Voter '%i' top vote is");
-            // and return true
+            preferences[voter][rank] = i;
+            printf("The voter %i has set %s as rank %i.\n", voter, name, rank);
             return true;
         }
     }
