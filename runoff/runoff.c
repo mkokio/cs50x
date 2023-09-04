@@ -159,6 +159,7 @@ void tabulate(void)
     for (int voter = 0; voter < voter_count; voter++)
     {
         //look for eliminated FALSE candidate in 0 position
+        int rank = 0;
         while (candidates[preferences[voter][rank]].eliminated) // if false (as in, not eliminated)
             {
                 rank++;
