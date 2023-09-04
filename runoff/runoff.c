@@ -204,17 +204,17 @@ int find_min(void)
     //For i from 0 to n-1
         //Find smallest number between numbers[i] and numbers[n-1]
         //Swap smallest number with numbers[i]
-    int remaining_candidates = 0;
+    int min_votes = voter_count;
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (!candidates[i].eliminated) //while FALSE (as in, NOT eliminated)
+        if (!candidates[i].eliminated && candidates[i].votes < min_votes) //while FALSE (as in, NOT eliminated)
         {
-            remaining_candidates++;
+            min_votes = candidates[i].votes;
         }
     }
 
-    return 0;
+    return min_votes;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
