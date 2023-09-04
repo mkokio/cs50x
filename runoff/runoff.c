@@ -206,7 +206,11 @@ int find_min(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        while (candidates[preferences[voter][rank]].eliminated)
+        int fewest_votes = 0;
+        while (!candidates[i].eliminated) //while FALSE (as in, NOT eliminated)
+        {
+            
+        }
     }
 
     return 0;
