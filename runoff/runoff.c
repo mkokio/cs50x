@@ -187,8 +187,6 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    float majority = MAX_CANDIDATES/2;
-    //do any have a majority vote?
     return false;
 }
 
