@@ -221,11 +221,12 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
-    //he function takes an argument min, which will be the minimum number of votes that anyone in the election currently has.
+    //The function takes an argument min, which will be the minimum number of votes that anyone in the election currently has.
     //The function should return true if every candidate remaining in the election has the same number of votes, and should return false otherwise.
     //Recall that a tie happens if every candidate still in the election has the same number of votes.
     //Note, too, that the is_tie function takes an argument min, which is the smallest number of votes any candidate
     //currently has. How might you use that information to determine if the election is a tie (or, conversely, not a tie)?
+    
     return false;
 }
 
