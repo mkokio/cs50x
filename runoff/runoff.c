@@ -163,15 +163,18 @@ void tabulate(void)
 //Once you’ve cast a vote for a voter’s first non-eliminated candidate, you’ll want to stop there, not continue down their ballot! Recall that you can break out of a loop early using break inside of a conditional.
 
 
-    //loop voter's ballots counting the 'false' candidate's votes closest to position 0
+    //loop each voter's ballots
     for (int voter = 0; voter < voter_count; voter++)
     {
-        int rank = 0;
-        if (!candidates[preferences[voter][rank]].eliminated) // if false (as in, not eliminated)
-        {
-            candidates[preferences[voter][rank]].votes++;
-            printf("Candidate: %s has %i votes.\n", candidates[preferences[voter][rank]].name, candidates[preferences[voter][rank]].votes);
-            break;
+        //look for eliminated FALSE candidate in 0 position
+        for (int rank = 0; rank < 2; rank++)
+        }
+            if (!candidates[preferences[voter][rank]].eliminated) // if false (as in, not eliminated)
+            {
+                candidates[preferences[voter][rank]].votes++;
+                printf("Candidate: %s has %i votes.\n", candidates[preferences[voter][rank]].name, candidates[preferences[voter][rank]].votes);
+                break;
+            }
         }
         else
         {
