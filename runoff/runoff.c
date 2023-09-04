@@ -226,7 +226,15 @@ bool is_tie(int min)
     //Recall that a tie happens if every candidate still in the election has the same number of votes.
     //Note, too, that the is_tie function takes an argument min, which is the smallest number of votes any candidate
     //currently has. How might you use that information to determine if the election is a tie (or, conversely, not a tie)?
-    
+
+    //loop through all candidates
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if(!candidates[i].eliminated && candidates[i].votes == min)
+        {
+            return true;
+        }
+    }
     return false;
 }
 
