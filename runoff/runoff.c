@@ -177,8 +177,18 @@ bool print_winner(void)
     // TODO
     // If any candidate has more than half of the vote, their name should be printed and the function should return true.
     //If nobody has won the election yet, the function should return false.
-    float majority = voter_count/2
-    printf("doing the print winner thing\n");
+
+    //set necessary majority
+    float majority = voter_count/2;
+    //loop through candidate's scores
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes >= majority)
+        {
+            printf("%s\n", candidates[i].name);
+            return true;
+        }
+    }
     return false;
 }
 
@@ -186,6 +196,11 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+
+    //The function should return the minimum vote total for any candidate who is still in the election.
+    //You’ll likely want to loop through the candidates to find the one who is both still in the election
+    //and has the fewest number of votes. What information should you keep track of as you loop through the candidates?
+
     return 0;
 }
 
