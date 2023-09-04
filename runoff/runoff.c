@@ -156,7 +156,6 @@ void tabulate(void)
 
 
     //loop voter's ballots counting the 'false' candidate's votes closest to position 0
-    //
     for (int i = 0; i < voter_count; i++)
     {
         int r = 0;
