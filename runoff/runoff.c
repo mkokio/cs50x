@@ -168,18 +168,13 @@ void tabulate(void)
     {
         //look for eliminated FALSE candidate in 0 position
         for (int rank = 0; rank < 2; rank++)
-        }
+        {
             if (!candidates[preferences[voter][rank]].eliminated) // if false (as in, not eliminated)
             {
                 candidates[preferences[voter][rank]].votes++;
                 printf("Candidate: %s has %i votes.\n", candidates[preferences[voter][rank]].name, candidates[preferences[voter][rank]].votes);
                 break;
             }
-        }
-        else
-        {
-            rank++;
-            break;
         }
     }
     return;
