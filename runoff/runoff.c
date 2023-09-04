@@ -200,6 +200,7 @@ int find_min(void)
     //The function should return the minimum vote total for any candidate who is still in the election.
     //You’ll likely want to loop through the candidates to find the one who is both still in the election
     //and has the fewest number of votes. What information should you keep track of as you loop through the candidates?
+    // if ALL non-eliminated candidates have the "min" votes the function should return true.
     //For i from 0 to n-1
         //Find smallest number between numbers[i] and numbers[n-1]
         //Swap smallest number with numbers[i]
