@@ -83,12 +83,12 @@ int main(int argc, string argv[])
     }
 
 //print array
- for (int i = 0; i < voter_count; i++) {
-    for (int j = 0; j < 3; j++) {
-      printf("%d ", preferences[i][j]);
-    }
-    printf("\n");
-  }
+// for (int i = 0; i < voter_count; i++) {
+//   for (int j = 0; j < 3; j++) {
+//      printf("%d ", preferences[i][j]);
+//    }
+//    printf("\n");
+//  }
 
     // Keep holding runoffs until winner exists
     while (true)
