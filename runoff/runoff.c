@@ -175,6 +175,9 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    // If any candidate has more than half of the vote, their name should be printed and the function should return true.
+    //If nobody has won the election yet, the function should return false.
+    float majority = voter_count/2
     printf("doing the print winner thing\n");
     return false;
 }
