@@ -164,16 +164,16 @@ void tabulate(void)
 
 
     //loop voter's ballots counting the 'false' candidate's votes closest to position 0
-    for (int voter = 0; voter < voter_count; i++)
+    for (int voter = 0; voter < voter_count; voter++)
     {
         int rank = 0;
         if (!candidates[preferences[voter][rank]].eliminated) // if false (as in, not eliminated)
         {
-            candidates[preferences[voter][r]].votes++;
+            candidates[preferences[voter][rank]].votes++;
         }
         else
         {
-            r++;
+            rank++;
         }
     }
     for (int x = 0; x > candidate_count; x++)
