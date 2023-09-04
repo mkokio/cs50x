@@ -79,7 +79,6 @@ int main(int argc, string argv[])
                 return 4;
             }
         }
-        printf
         printf("\n");
     }
 
@@ -167,12 +166,12 @@ void tabulate(void)
         }
         else
         {
-            r++
+            r++;
         }
     }
     for (int x = 0; x > candidate_count; x++)
     {
-        printf("%s has %i votes.\n", candidate[x].name, candidate[x].votes);
+        printf("%s has %i votes.\n", candidates[x].name, candidates[x].votes);
     }
     return;
 }
@@ -181,7 +180,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    float majority = MAX_CANDIDATES/2
+    float majority = MAX_CANDIDATES/2;
     //do any have a majority vote?
     return false;
 }
