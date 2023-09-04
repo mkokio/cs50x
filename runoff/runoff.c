@@ -151,7 +151,7 @@ void tabulate(void)
     //loop through candidates, counting "true" votes
     for (int i = 0; i < candidate_count; i++)
     {
-        candi
+        
     }
 
 
