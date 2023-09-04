@@ -200,6 +200,10 @@ int find_min(void)
     //The function should return the minimum vote total for any candidate who is still in the election.
     //You’ll likely want to loop through the candidates to find the one who is both still in the election
     //and has the fewest number of votes. What information should you keep track of as you loop through the candidates?
+    for (int i = 0; i < candidate_count; i++)
+    {
+        while (candidates[preferences[voter][rank]].eliminated)
+    }
 
     return 0;
 }
