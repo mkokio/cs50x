@@ -147,16 +147,28 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+//The function should update the number of votes each candidate has at this stage in the runoff.
+//Recall that at each stage in the runoff, every voter effectively votes for their top-preferred candidate who has not already been eliminated.
+//Recall that voter_count stores the number of voters in the election and that, for each voter in our election, we want to count one ballot.
+//Recall that for a voter i, their top choice candidate is represented by preferences[i][0], their second choice candidate by preferences[i][1], etc.
+//Recall that the candidate struct has a field called eliminated, which will be true if the candidate has been eliminated from the election.
+//Recall that the candidate struct has a field called votes, which you’ll likely want to update for each voter’s preferred candidate.
+//Once you’ve cast a vote for a voter’s first non-eliminated candidate, you’ll want to stop there, not continue down their ballot! Recall that you can break out of a loop early using break inside of a conditional.
+
 
     //loop voter's ballots counting the 'false' candidate's votes closest to position 0
     //
     for (int i = 0; i < voter_count; i++)
     {
-        if (!candidates[preferences[i][0]].eliminated) // if false (as in, not eliminated)
+        int r = 0;
+        if (!candidates[preferences[i][r]].eliminated) // if false (as in, not eliminated)
         {
-            candidates[preferences[i][0]].votes++;
+            candidates[preferences[i][r]].votes++;
         }
         else
+        {
+            r++
+        }
     }
 
 
