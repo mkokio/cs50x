@@ -183,7 +183,7 @@ bool print_winner(void)
     //loop through candidate's scores
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes >= majority)
+        if (candidates[i].votes > majority)
         {
             printf("%s\n", candidates[i].name);
             return true;
