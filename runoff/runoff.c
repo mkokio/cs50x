@@ -170,8 +170,10 @@ void tabulate(void)
             r++
         }
     }
-
-
+    for (int x = 0; x > candidate_count; x++)
+    {
+        printf("%s has %i votes.\n", candidate[x].name, candidate[x].votes);
+    }
     return;
 }
 
