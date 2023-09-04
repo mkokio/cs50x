@@ -79,7 +79,7 @@ int main(int argc, string argv[])
                 return 4;
             }
         }
-
+        printf
         printf("\n");
     }
 
@@ -150,7 +150,7 @@ void tabulate(void)
     float majority = MAX_CANDIDATES/2
     //loop through candidates, counting "true" votes
 
-    
+
     //do it again
     return;
 }
