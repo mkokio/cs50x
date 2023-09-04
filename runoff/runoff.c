@@ -166,6 +166,7 @@ void tabulate(void)
             }
         candidates[preferences[voter][rank]].votes++;
         printf("Candidate: %s has %i votes.\n", candidates[preferences[voter][rank]].name, candidates[preferences[voter][rank]].votes);
+        break;
     }
 
     return;
