@@ -204,12 +204,13 @@ int find_min(void)
     //For i from 0 to n-1
         //Find smallest number between numbers[i] and numbers[n-1]
         //Swap smallest number with numbers[i]
-    int min = 0;
+    int remaining_candidates = 0;
+
     for (int i = 0; i < candidate_count; i++)
     {
-        while (!candidates[i].eliminated) //while FALSE (as in, NOT eliminated)
+        if (!candidates[i].eliminated) //while FALSE (as in, NOT eliminated)
         {
-
+            remaining_candidates++;
         }
     }
 
