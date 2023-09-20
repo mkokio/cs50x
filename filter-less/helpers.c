@@ -14,7 +14,6 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed = grey;
         }
     }
-    return;
 }
 
 // Convert image to sepia
@@ -44,7 +43,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed = sepiaRed;
         }
     }
-    return;
 }
 
 // Reflect image horizontally
@@ -60,7 +58,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             image[i][width-1-j] = tmp;
         }
     }
-    return;
 }
 
 // Blur image
@@ -69,11 +66,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE tmp;
     for (int i = 0; i < height; i ++)
         {
-            for (int j = 0; j < width/2; j++)
+            for (int j = 0; j < width; j++)
             {
                 tmp = image[i][j];
             }
-    return;
+        }
 }
 //When implementing the blur function, you might find that blurring one pixel ends up
 //affecting the blur of another pixel. Perhaps create a copy of image (the function’s
