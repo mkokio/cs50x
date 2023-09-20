@@ -71,7 +71,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             for (int j = 0; j < width/2; j++)
             {
-
+                tmp = image[i][j];
+            }
     return;
 }
 //When implementing the blur function, you might find that blurring one pixel ends up
