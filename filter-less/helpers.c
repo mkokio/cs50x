@@ -4,9 +4,9 @@
  //  Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i < height; i +  + )
+    for (int i = 0; i < height; i ++ )
     {
-        for (int j = 0; j < width; j +  + )
+        for (int j = 0; j < width; j ++ )
         {
             int grey = round((image[i][j].rgbtBlue  +  image[i][j].rgbtGreen  +  image[i][j].rgbtRed)  /  3.0);
             image[i][j].rgbtBlue = grey;
@@ -19,9 +19,9 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
  //  Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i < height; i +  + )
+    for (int i = 0; i < height; i ++ )
     {
-        for (int j = 0; j < width; j +  + )
+        for (int j = 0; j < width; j ++ )
         {
             int sepiaBlue = round((.272 * image[i][j].rgbtRed)  +  (.534 * image[i][j].rgbtGreen)  +  (.131 * image[i][j].rgbtBlue));
             int sepiaGreen = round((.349 * image[i][j].rgbtRed)  +  (.686 * image[i][j].rgbtGreen)  +  (.168 * image[i][j].rgbtBlue));
@@ -48,9 +48,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
  //  Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i < height; i +  + )
+    for (int i = 0; i < height; i ++ )
     {
-        for (int j = 0; j < width  /  2; j +  + )
+        for (int j = 0; j < width  /  2; j ++ )
         {
              //  pixel at image[i][0] need to be swapped with pixel at image[i][width]
             RGBTRIPLE tmp = image[i][j];
@@ -65,17 +65,17 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
      //  Make a copy of the image
     RGBTRIPLE tmp[height][width];
-    for (int i = 0; i < height; i +  + )
+    for (int i = 0; i < height; i ++ )
     {
-        for (int j = 0; j < width; j +  + )
+        for (int j = 0; j < width; j ++ )
         {
             tmp[i][j] = image[i][j];
         }
     }
      //  Iterate through each pixel of the original image
-    for (int i = 0; i < height; i +  + )
+    for (int i = 0; i < height; i ++ )
     {
-        for (int j = 0; j < width; j +  + )
+        for (int j = 0; j < width; j ++ )
         {
             if (i == 0)  //  Top Row
             {
