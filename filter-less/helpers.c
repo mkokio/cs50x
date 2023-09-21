@@ -78,11 +78,23 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             for (int j = 0; j < width; j++)
             {
-                if (i = 0)
+                if (i == 0) // Top Row
                     {
-                        if (j = 0)
+                        if (j == 0) // First Pixel
                         {
-                            image[i][j] = round((tmp[i][j]+tmp[i+1][j]+tmp[i][j+1]+tmp[i+1][j+1])/4)
+                            image[i][j].rgbtBlue = round((tmp[i][j].rgbtBlue+tmp[i][j+1].rgbtBlue+tmp[i+1][j].rgbtBlue+tmp[i+1][j+1].rgbtBlue)/4);
+                            image[i][j].rgbtGreen = round((tmp[i][j].rgbtGreen+tmp[i][j+1].rgbtGreen+tmp[i+1][j].rgbtGreen+tmp[i+1][j+1].rgbtGreen)/4);
+                            image[i][j].rgbtRed = round((tmp[i][j].rgbtRed+tmp[i][j+1].rgbtRed+tmp[i+1][j].rgbtRed+tmp[i+1][j+1].rgbtRed)/4);
+                        }
+                        else if (j < width) // Middle but not last pixel
+                        {
+                            image[i][j].rgbtBlue = round((tmp[i][j].rgbtBlue+tmp[i][j+1].rgbtBlue+tmp[i+1][j].rgbtBlue+tmp[i+1][j+1].rgbtBlue)+tmp[i][j-1].rgbtBlue+tmp[i+1][j-1].rgbtBlue)/6);
+                            image[i][j].rgbtGreen = round((tmp[i][j].rgbtGreen+tmp[i][j+1].rgbtGreen+tmp[i+1][j].rgbtGreen+tmp[i+1][j+1].rgbtGreen)+tmp[i][j-1].rgbtGreen+tmp[i+1][j-1].rgbtGreen)/6);
+                            image[i][j].rgbtRed = round((tmp[i][j].rgbtRed+tmp[i][j+1].rgbtRed+tmp[i+1][j].rgbtRed+tmp[i+1][j+1].rgbtRed)+tmp[i][j-1].rgbtBlue+tmp[i+1][j-1].rgbtBlue)/6);
+                        }
+                        else // Last Pixel on top row
+                        {
+
                         }
                     }
             }
