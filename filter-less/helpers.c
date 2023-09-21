@@ -73,9 +73,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     //  Iterate through each pixel of the original image
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i <= height; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j <= width; j++)
         {
             if (i == 0) //  Top Row
             {
