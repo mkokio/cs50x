@@ -90,13 +90,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         {
                             image[i][j].rgbtBlue = round((tmp[i][j].rgbtBlue+tmp[i][j+1].rgbtBlue+tmp[i+1][j].rgbtBlue+tmp[i+1][j+1].rgbtBlue)+tmp[i][j-1].rgbtBlue+tmp[i+1][j-1].rgbtBlue)/6);
                             image[i][j].rgbtGreen = round((tmp[i][j].rgbtGreen+tmp[i][j+1].rgbtGreen+tmp[i+1][j].rgbtGreen+tmp[i+1][j+1].rgbtGreen)+tmp[i][j-1].rgbtGreen+tmp[i+1][j-1].rgbtGreen)/6);
-                            image[i][j].rgbtRed = round((tmp[i][j].rgbtRed+tmp[i][j+1].rgbtRed+tmp[i+1][j].rgbtRed+tmp[i+1][j+1].rgbtRed)+tmp[i][j-1].rgbtBlue+tmp[i+1][j-1].rgbtBlue)/6);
+                            image[i][j].rgbtRed = round((tmp[i][j].rgbtRed+tmp[i][j+1].rgbtRed+tmp[i+1][j].rgbtRed+tmp[i+1][j+1].rgbtRed)+tmp[i][j-1].rgbtRed+tmp[i+1][j-1].rgbtRed)/6);
                         }
                         else // Last Pixel on top row
                         {
 
                         }
                     }
+                if (j == 0 && i != )
             }
         }
 }
