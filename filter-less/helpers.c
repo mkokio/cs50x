@@ -62,6 +62,17 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 }
 
 //  Blur image
+// Sure, after copying the image, you can start by creating
+// two nested loops to iterate over each pixel in the image.
+// For each pixel, you'll need to create another set of nested loops
+// to iterate over the pixel's neighbors. Remember to check if each neighbor
+// is valid before including it in your calculations.
+// Calculate the sum of the RGB values of the valid neighbors,
+// count the number of valid neighbors, and then calculate the average.
+// Assign these averages to the corresponding pixel in the original image.
+// You can simply declare an integer variable and increment it each time you
+// find a valid neighbor. For example, you might start with
+// int valid_neighbors = 0; and then add 1 to valid_neighbors each time you find a valid neighbor pixel.
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     //  Make a copy of the image
@@ -73,5 +84,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             tmp[i][j] = image[i][j];
         }
     }
-    
+    // iterate over image's pixels
+    for (int i = 0; i < height; i++)
+    {
+        {
+            for (int j = 0; j < width; j++)
+        }
+    }
 }
