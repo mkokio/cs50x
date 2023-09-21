@@ -123,7 +123,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 if (i == height) // Last Row
                     if (j == 0) //First pixel
                     {
-
+                        image[i][j].rgbtBlue = round((tmp[i][j].rgbtBlue+tmp[i-1][j].rgbtBlue+tmp[i-1][j+1].rgbtBlue+tmp[i][j+1])/4);
+                        image[i][j].rgbtGreen = round((tmp[i][j].rgbtGreen+tmp[i-1][j].rgbtGreen+tmp[i-1][j+1].rgbtGreen+tmp[i][j+1]+tmp[i-1][j].rgbtGreen+tmp[i-1][j-1])/6);
+                        image[i][j].rgbtRed = round((tmp[i][j].rgbtGreen+tmp[i-1][j].rgbtGreen+tmp[i-1][j].rgbtGreen+tmp[i-1][j-1])/4);
                     }
                     else if (j < width) //Middle Pixels
                     {
