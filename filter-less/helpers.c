@@ -143,10 +143,5 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
             }
         }
+    }
 }
-//When implementing the blur function, you might find that blurring one pixel ends up
-//affecting the blur of another pixel. Perhaps create a copy of image (the function’s
-//third argument) by declaring a new (two-dimensional) array with code like
-//RGBTRIPLE copy[height][width]; and copying image into copy, pixel by pixel,
-//with nested for loops? And then read pixels’ colors from copy but write
-//(i.e., change) pixels’ colors in image?
