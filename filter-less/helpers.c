@@ -90,7 +90,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             // iterate over the pixel's neighbors
-            
+            tmp[i-1][j-1]
+            tmp[i-1][j]
+            tmp[i-1][j+1]
+            tmp[i][j-1]
+            tmp[i][j]
+            tmp[i][j+1]
+            tmp[i+1][j-1]
+            tmp[i+1][j]
+            tmp[i+1][j+1]
         }
     }
 }
