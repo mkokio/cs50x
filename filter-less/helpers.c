@@ -145,3 +145,4 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 }
+style50 helpers.c
