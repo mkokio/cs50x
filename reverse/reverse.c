@@ -1,4 +1,3 @@
-make reverse
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,6 +11,7 @@ int main(int argc, char *argv[])
 {
     // Ensure proper usage
     // TODO #1
+    printf("Usage: ./reverse input.wav output.wav\n")
 
     // Open input file for reading
     // TODO #2
