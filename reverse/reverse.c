@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     }
     // Open input file for reading
     // TODO #2
-    
+
 
     // Read header
     // TODO #3
@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
+    printf("Input is not a WAV file.\n")
     return 0;
 }
 
