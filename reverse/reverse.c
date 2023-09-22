@@ -15,11 +15,9 @@ int main(int argc, char *argv[])
     {
         printf("Usage: ./reverse input.wav output.wav\n");
     }
-    WAVHEADER header = 
-    check_format();
     // Open input file for reading
     // TODO #2
-
+    
 
     // Read header
     // TODO #3
