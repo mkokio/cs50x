@@ -62,17 +62,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 }
 
 //  Blur image
-// Sure, after copying the image, you can start by creating
-// two nested loops to iterate over each pixel in the image.
-// For each pixel, you'll need to create another set of nested loops
-// to iterate over the pixel's neighbors. Remember to check if each neighbor
-// is valid before including it in your calculations.
-// Calculate the sum of the RGB values of the valid neighbors,
-// count the number of valid neighbors, and then calculate the average.
-// Assign these averages to the corresponding pixel in the original image.
-// You can simply declare an integer variable and increment it each time you
-// find a valid neighbor. For example, you might start with
-// int valid_neighbors = 0; and then add 1 to valid_neighbors each time you find a valid neighbor pixel.
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     //  Make a copy of the image
@@ -89,16 +78,29 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            // iterate over the pixel's neighbors and check if valid
-            tmp[i-1][j-1]
-            tmp[i-1][j]
-            tmp[i-1][j+1]
-            tmp[i][j-1]
-            tmp[i][j]
-            tmp[i][j+1]
-            tmp[i+1][j-1]
-            tmp[i+1][j]
-            tmp[i+1][j+1]
+            int totalR = 0;
+            int totalG = 0;
+            int totalB = 0;
+            float count = 0.0;
+
+            // loop through all surrounding pixels
+            for (int a = i - 1; a < i + 2; a++)
+            {
+                for (int b = j - 1; b < j + 2; b++)
+                {
+                    if (a >= 0 && a < height && b >= 0 && b < width)
+                    {
+                        totalR += tmp[a][b].rgbtRed;
+                        totalG += tmp[a][b].rgbtGreen;
+                        totalB += tmp[a][b].rgbtBlue;
+                        count++;
+                    }
+                }
+            }
+            image[i][j].rgbtRed = round(totalR/count);
+            image[i][j].rgbtGreen = round(totalG/count);
+            image[i][j].rgbtBlue = round(totalB/count);
+
         }
     }
 }
