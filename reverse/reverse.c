@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     }
     // Open input file for reading
     // TODO #2
-    
+    argv[1]
 
     // Read header
     // TODO #3
