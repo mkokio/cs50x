@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     // Read header
     // TODO #3
     WAVHEADER headercopy;
-    fread(&headercopy, sizeof(WAVHEADER), 1, ptr);
+    fread(&headercopy, sizeof(WAVHEADER), 1, ptr1);
 
     // Use check_format to ensure WAV format
     // TODO #4
@@ -32,11 +32,11 @@ int main(int argc, char *argv[])
     // Open output file for writing
     // TODO #5
     char *output = argv[2];
-    FILE* ptr2 = fopen(output, "w")
+    FILE* ptr2 = fopen(output, "w");
 
     // Write header to file
     // TODO #6
-    fwrite()
+    fwrite(&headercopy, sizeof(WAVHEADER), 1, ptr2);
 
     // Use get_block_size to calculate size of block
     // TODO #7
