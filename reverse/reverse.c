@@ -49,22 +49,18 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
-    //if () // it is a wav file
     char *wave = "wave";
+    for (int i = 0; i < 4; i++)
     {
-        for (int i = 0; i < 4; i++)
+        if (header.format[i] != wave[i])
         {
-            if (header.format[i] != wave[i])
-            {
-                printf("Input is not a WAV file.\n");
-                return 1;
-                break;
-            }
-        return 0;
-
+            printf("Input is not a WAV file.\n");
+            return 1;
+            break;
         }
     }
 }
+
 
 int get_block_size(WAVHEADER header)
 {
