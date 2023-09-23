@@ -56,7 +56,6 @@ int check_format(WAVHEADER header)
         {
             printf("Input is not a WAV file.\n");
             return 1;
-            break;
         }
     }
     return 0;
