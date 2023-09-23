@@ -60,10 +60,7 @@ int check_format(WAVHEADER header)
                 return 1;
                 break;
             }
-            else
-            {
-                return 0;
-            }
+        return 0;
 
         }
     }
