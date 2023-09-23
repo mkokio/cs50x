@@ -50,7 +50,12 @@ int check_format(WAVHEADER header)
 {
     // TODO #4
     //if () // it is a wav file
+    char *wave = "wave";
     {
+        for (int i = 0; i < 4; i++)
+        {
+            if (header.format[i] == wave[i]);
+        }
         return 0;
     }
     //else // it is NOT a wav file
