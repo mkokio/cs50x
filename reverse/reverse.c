@@ -54,15 +54,18 @@ int check_format(WAVHEADER header)
     {
         for (int i = 0; i < 4; i++)
         {
-            if (header.format[i] == wave[i]);
-            
+            if (header.format[i] != wave[i])
+            {
+                printf("Input is not a WAV file.\n");
+                return 1;
+                break;
+            }
+            else
+            {
+                return 0;
+            }
+
         }
-        return 0;
-    }
-    //else // it is NOT a wav file
-    {
-    //    printf("Input is not a WAV file.\n");
-    //    return 1;
     }
 }
 
