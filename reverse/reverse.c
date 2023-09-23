@@ -55,6 +55,7 @@ int check_format(WAVHEADER header)
         for (int i = 0; i < 4; i++)
         {
             if (header.format[i] == wave[i]);
+            
         }
         return 0;
     }
