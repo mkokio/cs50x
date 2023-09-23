@@ -14,20 +14,26 @@ int main(int argc, char *argv[])
     if (argc != 3)
     {
         printf("Usage: ./reverse input.wav output.wav\n");
+        return 1;
     }
     // Open input file for reading
     // TODO #2
-    char *filename = argv[1];
-    FILE* ptr = fopen(filename, "r");
+    char *input = argv[1];
+    FILE* ptr1 = fopen(input, "r"); // don't forget to close the program later
 
     // Read header
     // TODO #3
+    WAVHEADER headercopy[];
+    fread("buffer", "size", "quantity", ptr)
+
 
     // Use check_format to ensure WAV format
     // TODO #4
 
     // Open output file for writing
     // TODO #5
+    char *output = argv[2];
+    FILE* ptr2 = fopen(output, "w")
 
     // Write header to file
     // TODO #6
