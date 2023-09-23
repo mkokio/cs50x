@@ -28,6 +28,8 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
+    char format = headercopy.format;
+    printf("%c\n", format);
 
     // Open output file for writing
     // TODO #5
