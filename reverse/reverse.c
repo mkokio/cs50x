@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
-    char *wave = "wave";
+    char *wave = "WAVE";
     for (int i = 0; i < 4; i++)
     {
         if (header.format[i] != wave[i])
@@ -59,6 +59,7 @@ int check_format(WAVHEADER header)
             break;
         }
     }
+    return 0;
 }
 
 
