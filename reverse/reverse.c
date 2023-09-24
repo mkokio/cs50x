@@ -56,6 +56,11 @@ int main(int argc, char *argv[])
 // be pointing at the location where the read concluded. In other words, the input pointer
 // may need to be moved back two block sizes after each fread, one to move back to where
 // the fread began, and the second to move to the previous, unread block.
+// use fseek to move the file pointer to the ith position in ptr1, then
+// use fgetc to read the character at that position. After that, you'll want to
+// write that character to the corresponding position in ptr2.
+// Remember to also move the file pointer in ptr2 to the correct position before writing.
+// You can calculate the correct position in ptr2 based on i, endoffileposition, and endofheaderposition.
 
     fseek(ptr1, 0, SEEK_END); //offest is zero from the end of the file
     int endoffileposition = ftell(ptr1);
