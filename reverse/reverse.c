@@ -66,8 +66,8 @@ int check_format(WAVHEADER header)
 int get_block_size(WAVHEADER header) //bytes per sample X number of channels
 {
     // TODO #7
-    int bloc_size = header.numChannels * 
-    return 0;
+    int block_size = header.numChannels * header.sampleRate / header.byteRate;
+    return block_size;
 }
 // return an integer representing the block size of the given WAV file,
 // in bytes. We can think of a block as a unit of auditory data. For audio,
@@ -77,16 +77,3 @@ int get_block_size(WAVHEADER header) //bytes per sample X number of channels
 // Be sure to reference the Background section for a more in-depth explanation
 // as to what these values mean and how they are stored. See too wav.h, to determine which members of WAVHEADER might be useful.
 // Notice that one of the members of WAVHEADER is bitsPerSample. But to calculate block size, you’ll need bytes per sample!
-BYTE   chunkID[4];
-DWORD  chunkSize;
-BYTE   format[4];
-BYTE   subchunk1ID[4];
-DWORD  subchunk1Size;
-WORD   audioFormat;
-WORD   numChannels;
-DWORD  sampleRate;
-DWORD  byteRate;
-WORD   blockAlign;
-WORD   bitsPerSample;
-BYTE   subchunk2ID[4];
-DWORD  subchunk2Size;
