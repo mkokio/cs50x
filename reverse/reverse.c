@@ -70,8 +70,8 @@ int main(int argc, char *argv[])
         //copy (write) the last character of ptr1 into the first position of ptr2
         fseek(ptr1, i, SEEK_END); // move to the ith position (one less each loop)
         char ch = fgetc(ptr1); // read and store that character as ch
-        fseek(ptr2, 0, )
-        fputc(ch, ptr2); // put that character
+        fseek(ptr2, i * -1, SEEK_SET);
+        fputc(ch, ptr2); // put that character in place
     }
 
 fclose(ptr1);
