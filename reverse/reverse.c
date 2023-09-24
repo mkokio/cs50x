@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
-    
+
 }
 
 int check_format(WAVHEADER header)
@@ -64,7 +64,7 @@ int check_format(WAVHEADER header)
 }
 
 
-int get_block_size(WAVHEADER header) //bytes per sample X number of channels
+int get_block_size(WAVHEADER header) //bytes per sample X number of channels. represents the size of the data
 {
     // TODO #7
     int block_size = header.numChannels * (header.bitsPerSample / 8);
