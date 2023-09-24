@@ -62,14 +62,15 @@ int main(int argc, char *argv[])
 // Remember to also move the file pointer in ptr2 to the correct position before writing.
 // You can calculate the correct position in ptr2 based on i, endoffileposition, and endofheaderposition.
 
+    char block[block_size]; // buffer to hold a block of data
     fseek(ptr1, 0, SEEK_END); //offest is zero from the end of the file
     int endoffileposition = ftell(ptr1);
     for (int i = endoffileposition - block_size; i >= endofheaderposition; i -= block_size)
     {
         //copy (write) the last character of ptr1 into the first position of ptr2
-        fseek(ptr1, i * block_size, SEEK_SET); // move to the ith position (one less each loop)
-        char ch = fgetc(ptr1); // read and store that character as ch
-        fputc(ch, ptr2); // put that character in place
+        fseek(ptr1, i, SEEK_SET); // move to the ith position (one less each loop)
+        fread(block, block_size, 1, ptr1); // read a block of data
+        fwrite(block, block_size, 1, ptr2); // write that block of data
     }
 
 fclose(ptr1);
