@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     // TODO #3
     WAVHEADER headercopy;
     fread(&headercopy, sizeof(WAVHEADER), 1, ptr1);
-    int endofheaderposition = ftell(ptr1);
+    int endofheaderposition = ftell(ptr1); //44 btw
     printf("%i\n", endofheaderposition);
 
     // Use check_format to ensure WAV format
