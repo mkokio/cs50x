@@ -57,7 +57,8 @@ int main(int argc, char *argv[])
 
 
 
-fclose
+fclose(ptr1);
+fclose(ptr2);
 }
 
 int check_format(WAVHEADER header)
