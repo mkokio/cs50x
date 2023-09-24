@@ -45,7 +45,19 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
+// fseek: sets a file pointer to a given offset. It may be useful to experiment with negative offset
+// values to move a file pointer backwards.
+// ftell: returns the current position of a file pointer.
+// It may be useful to inspect what value ftell returns after the input header is
+// read in the third TODO in addition to what it returns while the audio data is being read.
+// Keep in mind that after you use fread to load in a block of data, the input pointer will
+// be pointing at the location where the read concluded. In other words, the input pointer
+// may need to be moved back two block sizes after each fread, one to move back to where
+// the fread began, and the second to move to the previous, unread block.
 
+
+
+fclose
 }
 
 int check_format(WAVHEADER header)
