@@ -66,7 +66,7 @@ int check_format(WAVHEADER header)
 int get_block_size(WAVHEADER header) //bytes per sample X number of channels
 {
     // TODO #7
-    int bloc_size = header.
+    int bloc_size = header.numChannels * 
     return 0;
 }
 // return an integer representing the block size of the given WAV file,
