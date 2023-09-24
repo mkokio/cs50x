@@ -19,14 +19,13 @@ int main(int argc, char *argv[])
     // Open input file for reading
     // TODO #2
     char *input = argv[1];
-    FILE* ptr1 = fopen(input, "r"); // don't forget to close the program later
+    FILE* ptr1 = fopen(input, "r");
 
     // Read header
     // TODO #3
     WAVHEADER headercopy;
     fread(&headercopy, sizeof(WAVHEADER), 1, ptr1);
-    int endofheaderposition = ftell(ptr1); //44 btw
-    printf("%i\n", endofheaderposition);
+    int endofheaderposition = ftell(ptr1);
 
     // Use check_format to ensure WAV format
     // TODO #4
@@ -70,7 +69,6 @@ int main(int argc, char *argv[])
         //copy (write) the last character of ptr1 into the first position of ptr2
         fseek(ptr1, i, SEEK_SET); // move to the ith position (one less each loop)
         char ch = fgetc(ptr1); // read and store that character as ch
-        
         fputc(ch, ptr2); // put that character in place
     }
 
