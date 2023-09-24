@@ -57,10 +57,12 @@ int main(int argc, char *argv[])
 // may need to be moved back two block sizes after each fread, one to move back to where
 // the fread began, and the second to move to the previous, unread block.
 
-   fseek(ptr1, 0, SEEK_END); //offest is zero from the end of the file
-   int endoffileposition = ftell(ptr1);
-   for (int i = 0; i > - endoffileposition + endofheaderposition; i--)
-
+    fseek(ptr1, 0, SEEK_END); //offest is zero from the end of the file
+    int endoffileposition = ftell(ptr1);
+    for (int i = endoffileposition - 1; i >= endofheaderposition; i--)
+    {
+        //copy (write) the last character of ptr1 into the first position of ptr2
+    }
 
 fclose(ptr1);
 fclose(ptr2);
