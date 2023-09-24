@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 // be pointing at the location where the read concluded. In other words, the input pointer
 // may need to be moved back two block sizes after each fread, one to move back to where
 // the fread began, and the second to move to the previous, unread block.
-    
+   fseek();
 
 
 fclose(ptr1);
