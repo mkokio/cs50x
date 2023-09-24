@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 
     fseek(ptr1, 0, SEEK_END); //offest is zero from the end of the file
     int endoffileposition = ftell(ptr1);
-    for (int i = endoffileposition - 1; i >= endofheaderposition; i--)
+    for (int i = endoffileposition - block_size; i >= endofheaderposition; i -= block_size)
     {
         //copy (write) the last character of ptr1 into the first position of ptr2
         fseek(ptr1, i * block_size, SEEK_SET); // move to the ith position (one less each loop)
