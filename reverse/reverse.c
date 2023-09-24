@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     // Open input file for reading
     // TODO #2
     char *input = argv[1];
-    FILE* ptr1 = fopen(input, "r");
+    FILE *ptr1 = fopen(input, "r");
 
     // Read header
     // TODO #3
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     // Open output file for writing
     // TODO #5
     char *output = argv[2];
-    FILE* ptr2 = fopen(output, "w");
+    FILE *ptr2 = fopen(output, "w");
 
     // Write header to file
     // TODO #6
@@ -46,35 +46,20 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
-// fseek: sets a file pointer to a given offset. It may be useful to experiment with negative offset
-// values to move a file pointer backwards.
-// ftell: returns the current position of a file pointer.
-// It may be useful to inspect what value ftell returns after the input header is
-// read in the third TODO in addition to what it returns while the audio data is being read.
-// Keep in mind that after you use fread to load in a block of data, the input pointer will
-// be pointing at the location where the read concluded. In other words, the input pointer
-// may need to be moved back two block sizes after each fread, one to move back to where
-// the fread began, and the second to move to the previous, unread block.
 
-// use fseek to move the file pointer to the ith position in ptr1, then
-// use fgetc to read the character at that position. After that, you'll want to
-// write that character to the corresponding position in ptr2.
-// Remember to also move the file pointer in ptr2 to the correct position before writing.
-// You can calculate the correct position in ptr2 based on i, endoffileposition, and endofheaderposition.
-
-    char block[block_size]; // buffer to hold a block of data
-    fseek(ptr1, 0, SEEK_END); //offest is zero from the end of the file
+    char block[block_size];   // buffer to hold a block of data
+    fseek(ptr1, 0, SEEK_END); // offest is zero from the end of the file
     int endoffileposition = ftell(ptr1);
     for (int i = endoffileposition - block_size; i >= endofheaderposition; i -= block_size)
     {
-        //copy (write) the last character of ptr1 into the first position of ptr2
-        fseek(ptr1, i, SEEK_SET); // move to the ith position (one less each loop)
-        fread(block, block_size, 1, ptr1); // read a block of data
+        // copy (write) the last character of ptr1 into the first position of ptr2
+        fseek(ptr1, i, SEEK_SET);           // move to the ith position (one less each loop)
+        fread(block, block_size, 1, ptr1);  // read a block of data
         fwrite(block, block_size, 1, ptr2); // write that block of data
     }
 
-fclose(ptr1);
-fclose(ptr2);
+    fclose(ptr1);
+    fclose(ptr2);
 }
 
 int check_format(WAVHEADER header)
@@ -92,8 +77,7 @@ int check_format(WAVHEADER header)
     return 0;
 }
 
-
-int get_block_size(WAVHEADER header) //bytes per sample X number of channels. represents the size of the data
+int get_block_size(WAVHEADER header) // bytes per sample X number of channels. represents the size of the data
 {
     // TODO #7
     int block_size = header.numChannels * (header.bitsPerSample / 8);
