@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     WAVHEADER headercopy;
     fread(&headercopy, sizeof(WAVHEADER), 1, ptr1);
     int endofheaderposition = ftell(ptr1);
-    printf("%i\n", position);
+    printf("%i\n", endofheaderposition);
 
     // Use check_format to ensure WAV format
     // TODO #4
@@ -57,8 +57,8 @@ int main(int argc, char *argv[])
 // may need to be moved back two block sizes after each fread, one to move back to where
 // the fread began, and the second to move to the previous, unread block.
    fseek(ptr1, 0, SEEK_END); //offest is zero from the end of the file
-   int position2 = ftell(ptr1);
-   printf("%i\n", position2);
+   int endoffileposition = ftell(ptr1);
+   printf("%i\n", endoffileposition);
 
 
 fclose(ptr1);
