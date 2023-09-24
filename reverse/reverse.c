@@ -66,7 +66,8 @@ int check_format(WAVHEADER header)
 int get_block_size(WAVHEADER header) //bytes per sample X number of channels
 {
     // TODO #7
-    int block_size = header.numChannels * header.sampleRate / header.byteRate;
+    int block_size = header.numChannels * (int) header.sampleRate / (int) header.byteRate;
+    printf("%i\n", block_size);
     return block_size;
 }
 // return an integer representing the block size of the given WAV file,
