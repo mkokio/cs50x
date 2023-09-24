@@ -62,6 +62,7 @@ int main(int argc, char *argv[])
     for (int i = endoffileposition - 1; i >= endofheaderposition; i--)
     {
         //copy (write) the last character of ptr1 into the first position of ptr2
+        fgetc()
     }
 
 fclose(ptr1);
