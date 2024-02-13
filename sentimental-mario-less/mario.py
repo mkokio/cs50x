@@ -5,3 +5,7 @@ while True:
     if number < 9:
         break
 
+while number > 0:
+    print("hello")
+    number += -1
+    
