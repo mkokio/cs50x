@@ -11,4 +11,3 @@ while number > 0:
     print((" " * (number - 1)) + ("#" * (block)))
     number += -1
     block += 1
-
