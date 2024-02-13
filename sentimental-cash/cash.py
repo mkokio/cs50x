@@ -5,16 +5,15 @@ while True:
     if change > 0:
         break
 
-quarters = 0
-dimes = 0
-quarters += int(change/.25)
-print(f"quarters: {quarters}")
-print(f"change: {change}")
-print(quarters*.25)
-print(f"Remaining money after quarters: {round(change - (quarters*.25),2)}")
+coins = 0
 
-quarters += int(change/.25)
-print(f"dimes: {dimes}")
-print(f"change: {change}")
-print(dimes*.10)
-print(f"Remaining money after quarters: {round(change - (dimes*.10),2)}")
+types = [.25, .10, .05, .01]
+
+while True:
+    if change < 0:
+        break
+    for type in types:
+        coins += int(change/type)
+        print(f"quarters: {coins}")
+        change = round(change - (coins*type),2)
+        print(f"change: {change}")
