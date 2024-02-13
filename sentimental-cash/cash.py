@@ -5,4 +5,7 @@ while True:
     if change > 0:
         break
 
-print(change/.25)
+print(int(change/.25))
+print(int(change/.10))
+print(int(change/.05))
+print(int(change/.01))
