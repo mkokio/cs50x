@@ -13,7 +13,7 @@ while True:
     if change < 0:
         break
     for type in types:
-        coins == int(change/type)
+        coins = int(change/type)
         print(f"{type} coins: {coins}")
         change = round(change - (coins*type),2)
         print(f"change: {change}")
