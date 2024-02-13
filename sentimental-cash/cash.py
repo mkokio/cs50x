@@ -9,6 +9,7 @@ coins = 0
 
 coins += int(change/.25)
 print(f"quarters: {coins}")
+print(f"change: {change}")
 print(f"Remaining money after quarters: {change - (coins*.25)}")
 
 change = change - (int(change/.25)*.25)
