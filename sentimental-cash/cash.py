@@ -10,5 +10,5 @@ quarters += int(change/.25)
 print(f"quarters: {quarters}")
 print(f"change: {change}")
 print(quarters*.25)
-print(f"Remaining money after quarters: {change - (quarters*.25)}")
+print(f"Remaining money after quarters: {round(change - (quarters*.25),2)}")
 
