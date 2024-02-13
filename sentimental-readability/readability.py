@@ -6,9 +6,9 @@ text = get_string("Text: ")
 #L is the average number of letters per 100 words in the text
 #S is the average number of sentences per 100 words in the text.
 
-letters =
-words =
-sentences =
+letters = 24
+words = 8
+sentences = 4
 
 def reading_level(letters, words, sentences):
 
