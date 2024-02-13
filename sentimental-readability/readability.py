@@ -1,7 +1,5 @@
 from cs50 import get_string
 
-x = 3
-
 text = get_string("Text: ")
 
 # 0.0588 * L - 0.296 * S - 15.8
@@ -13,6 +11,16 @@ words =
 sentences =
 
 def reading_level(letters, words, sentences):
-    
 
-print(f"Grade {x}")
+    L = letters / words * 100;
+    S = sentences / words * 100;
+    index = (0.0588 * L - 0.296 * S - 15.8);
+
+    if index < 1:
+        print("Before Grade 1")
+    elif (index >= 2 && index < 16):
+        print(f"Grade {index}")
+    else
+        print("Grade 16+");
+
+print(f"Grade {index}")
