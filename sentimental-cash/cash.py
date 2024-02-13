@@ -16,7 +16,7 @@ while True:
     for type in types:
         coins = int(change/type)
         total_coins += coins
-        //print(f"{type} coins: {coins}")
+        # print(f"{type} coins: {coins}")
         change = round(change - (coins*type),2)
-        print(f"change: {change}")
+        # print(f"change: {change}")
 print(total_coins)
