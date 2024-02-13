@@ -11,12 +11,12 @@ types = [.25, .10, .05, .01]
 total_coins = 0
 
 while True:
-    if change < 0:
+    if change <= 0:
         break
     for type in types:
         coins = int(change/type)
         total_coins += coins
-        print(f"{type} coins: {coins}")
+        //print(f"{type} coins: {coins}")
         change = round(change - (coins*type),2)
         print(f"change: {change}")
 print(total_coins)
