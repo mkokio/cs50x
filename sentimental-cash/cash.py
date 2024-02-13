@@ -14,6 +14,6 @@ while True:
         break
     for type in types:
         coins += int(change/type)
-        print(f"quarters: {coins}")
+        print(f"{type} coins: {coins}")
         change = round(change - (coins*type),2)
         print(f"change: {change}")
