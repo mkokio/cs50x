@@ -8,6 +8,7 @@ while True:
 coins = 0
 
 types = [.25, .10, .05, .01]
+total_coins = 0
 
 while True:
     if change < 0:
