@@ -5,7 +5,10 @@ while True:
     if number < 9:
         break
 
+block = 1
+
 while number > 0:
-    print(" " * (number - 1) + "#" * )
+    print((" " * (number - 1)) + ("#" * (block)))
     number += -1
+    block += 1
 
