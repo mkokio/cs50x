@@ -15,5 +15,5 @@ while True:
     for type in types:
         coins = int(change/type)
         total_coins += coins
-        change = round(change - (coins*type),2)
+        change = round(change - (coins*type), 2)
 print(total_coins)
