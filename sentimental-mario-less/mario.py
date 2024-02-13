@@ -6,6 +6,6 @@ while True:
         break
 
 while number > 0:
-    print("hello")
+    print(" " * (number - 1) + "#" * )
     number += -1
-    
+
