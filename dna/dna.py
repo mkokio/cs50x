@@ -10,14 +10,14 @@ def main():
         return False
 
     # TODO: Read database file into a variable
-    rows = []  # empty list
+    entries = []  # empty list
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         short_tandem_repeats = reader.fieldnames
-        for row in reader:
-            rows.append(row)
+        for entry in reader:
+            entries.append(entry)
     print(short_tandem_repeats)
-    print(f"This is the database as list of dictionaries: {rows}") # TO BE DELETED
+    print(f"This is the database as list of dictionaries: {entries}") # TO BE DELETED
 
     # TODO: Read DNA sequence file into a variable
     sequence = ""
