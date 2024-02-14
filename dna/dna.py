@@ -17,6 +17,10 @@ def main():
             rows.append(row)
     print(rows) # TO BE DELETED
 
+    with open("foo.csv") as file:
+    reader = csv.DictReader(file)
+    print(reader.fieldnames)
+
     # TODO: Read DNA sequence file into a variable
     sequence = ""
     with open(sys.argv[2]) as file:
