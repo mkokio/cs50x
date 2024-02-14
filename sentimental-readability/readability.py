@@ -6,10 +6,19 @@ text = get_string("Text: ")
 #L is the average number of letters per 100 words in the text
 #S is the average number of sentences per 100 words in the text.
 text_length = len(text)
-
 letters = 24
 words = 8
 sentences = 4
+
+punctiation = (" ", ",", ";", ":", ".", "!", "?")
+
+def count_letters(text):
+    counter = 0
+    for c in text:
+        if c is not in punctuation:
+            counter += 1
+count_letters(text)
+
 
 def reading_level(letters, words, sentences):
 
