@@ -26,8 +26,10 @@ def main():
     print(sequence) # TO BE DELETED
 
     # TODO: Find longest match of each STR in DNA sequence
+    profile = []
     for str in short_tandem_repeats:
-        print(longest_match(sequence, str))
+        profile.append(longest_match(sequence, str))
+    print(profile)
     # TODO: Check database for matching profiles
 
     return
