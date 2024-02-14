@@ -2,11 +2,6 @@ from cs50 import get_string
 
 text = get_string("Text: ")
 
-def main(text):
-    count(text)
-    reading_level(characters, words, sentences)
-
-
 def count(text):
     punctuation = (" ", ",", ";", ":", ".", "!", "?")
     characters = 0
@@ -21,6 +16,7 @@ def count(text):
             sentences += 1
     return characters, words, sentences
 
+print(count(text))
 
 def reading_level(characters, words, sentences):
 
@@ -34,5 +30,3 @@ def reading_level(characters, words, sentences):
         print(f"Grade {index}")
     else:
         print("Grade 16+");
-
-main(text)
