@@ -5,7 +5,7 @@ text = get_string("Text: ")
 def count(text):
     punctuation = (" ", ",", ";", ":", ".", "!", "?")
     characters = 0
-    words = 0
+    words = 1
     sentences =0
     for c in text:
         if c not in punctuation:
