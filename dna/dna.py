@@ -17,19 +17,20 @@ def main():
         for row in reader:
             rows.append(row)
     print(short_tandem_repeats)
-    print(rows) # TO BE DELETED
+    print(f"This is the database as list of dictionaries: {rows}") # TO BE DELETED
 
     # TODO: Read DNA sequence file into a variable
     sequence = ""
     with open(sys.argv[2]) as file:
         sequence = file.read()
-    print(sequence) # TO BE DELETED
+    print(f"Sequence to research in db: {sequence}") # TO BE DELETED
 
     # TODO: Find longest match of each STR in DNA sequence
     profile = []
-    for str in short_tandem_repeats:
+    for str in short_tandem_repeats[1:]:
         profile.append(longest_match(sequence, str))
-    print(profile)
+    print(f"Discovered profile to be matched: {profile}") # TO BE DELETED
+
     # TODO: Check database for matching profiles
 
     return
