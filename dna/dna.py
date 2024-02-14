@@ -33,7 +33,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for entry in entries:
-        
+        if #the dictionary's 1st, 2nd, 3rd value are the same as 'sequence' list, return the 0th value
 
     return
 
