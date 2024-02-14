@@ -32,6 +32,8 @@ def main():
     print(f"Discovered profile to be matched: {profile}") # TO BE DELETED
 
     # TODO: Check database for matching profiles
+    for entry in entries:
+        
 
     return
 
