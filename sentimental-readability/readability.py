@@ -30,4 +30,4 @@ def reading_level(characters, words, sentences):
     else:
         print("Grade 16+");
 
-reading_level(count(input))
+reading_level(*count(text))
