@@ -5,8 +5,9 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if len(argv) != 2:
-        print()
+    if len(sys.argv) != 2:
+        print("You need exactly two command line arguments, dog.")
+        return False
 
     # TODO: Read database file into a variable
 
