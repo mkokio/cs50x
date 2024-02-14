@@ -26,7 +26,7 @@ def reading_level(characters, words, sentences):
     if index < 1:
         print("Before Grade 1")
     elif (1 <= index <= 16):
-        print(f"Grade {round(index)}")
+        print(f"Grade {index}")
     else:
         print("Grade 16+");
 
