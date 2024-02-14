@@ -16,7 +16,6 @@ def count(text):
             sentences += 1
     return characters, words, sentences
 
-print(count(text))
 
 def reading_level(characters, words, sentences):
 
