@@ -14,7 +14,6 @@ def count(text):
             words += 1
         if c in (".", "?", "!"):
             sentences += 1
-    #print(characters, words, sentences)
     return characters, words, sentences
 
 
