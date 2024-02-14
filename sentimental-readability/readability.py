@@ -10,11 +10,11 @@ def count(text):
     for c in text:
         if c not in punctuation:
             characters += 1
-        if c == " ":
+        if c in (" ", "'"):
             words += 1
         if c in (".", "?", "!"):
             sentences += 1
-    print(characters, words, sentences)
+    #print(characters, words, sentences)
     return characters, words, sentences
 
 
