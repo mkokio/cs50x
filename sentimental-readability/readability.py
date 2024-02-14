@@ -6,7 +6,7 @@ text = get_string("Text: ")
 #L is the average number of letters per 100 words in the text
 #S is the average number of sentences per 100 words in the text.
 text_length = len(text)
-print(text_length)
+
 letters = 24
 words = 8
 sentences = 4
