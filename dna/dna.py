@@ -13,13 +13,10 @@ def main():
     rows = []  # empty list
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
+        sub(reader.fieldnames)
         for row in reader:
             rows.append(row)
     print(rows) # TO BE DELETED
-
-    with open("foo.csv") as file:
-    reader = csv.DictReader(file)
-    print(reader.fieldnames)
 
     # TODO: Read DNA sequence file into a variable
     sequence = ""
