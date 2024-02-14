@@ -14,8 +14,7 @@ def count(text):
             words += 1
         if c in (".", "?", "!"):
             sentences += 1
-    list = (characters, words, sentences)
-    return list
+    return characters, words, sentences
 
 print(count(text))
 
@@ -31,3 +30,5 @@ def reading_level(characters, words, sentences):
         print(f"Grade {index}")
     else:
         print("Grade 16+");
+
+reading_level(count(input))
