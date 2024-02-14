@@ -22,9 +22,9 @@ def count(text):
     return characters, words, sentences
 
 
-def reading_level(letters, words, sentences):
+def reading_level(characters, words, sentences):
 
-    L = letters / words * 100;
+    L = characters / words * 100;
     S = sentences / words * 100;
     index = (0.0588 * L - 0.296 * S - 15.8);
 
