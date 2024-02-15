@@ -16,27 +16,32 @@ def main():
         short_tandem_repeats = reader.fieldnames
         for entry in reader:
             entries.append(entry)
-    print(short_tandem_repeats)
-    print(f"This is the database as list of dictionaries: {entries}") # TO BE DELETED
 
     # TODO: Read DNA sequence file into a variable
     sequence = ""
     with open(sys.argv[2]) as file:
         sequence = file.read()
-    print(f"Sequence to research in db: {sequence}") # TO BE DELETED
 
     # TODO: Find longest match of each STR in DNA sequence
-    profile = []
-    for str in short_tandem_repeats[1:]:
-        profile.append(longest_match(sequence, str))
-    print(f"Discovered profile to be matched: {profile}") # TO BE DELETED
+    p = []
+    for STR in short_tandem_repeats[1:]:
+        p.append(longest_match(sequence, STR))
+    profile = [str(i) for i in p]
 
     # TODO: Check database for matching profiles
+    # short_tandem_repeats is this list ['name', 'AGATC', 'AATG', 'TATC']
+    # entries is a list of dictionaries representing the database
+    # sequence is the long string which we are looking up in the database
+    # profile is a list of three strings ['4', '1', '5'] for example
     for entry in entries:
-        for value in entry.values():
-            print(value)
-
-            #if #the dictionary's 1st, 2nd, 3rd value are the same as 'sequence' list, return the 0th value
+        profile_lookup = []
+        for value in (entry.values()):
+            profile_lookup.append(value)
+        if profile_lookup[1:] == profile:
+            print(profile_lookup[0])
+            break
+    else:
+        print('No Match')
 
     return
 
