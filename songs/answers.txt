@@ -2,5 +2,16 @@ Suppose Spotify determines an audio aura by looking at the average energy, valen
 
 If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
 
+With this query:
+sqlite> SELECT AVG(energy), AVG(valence), AVG(danceability) FROM songs;
+I get:
++-------------+--------------+-------------------+
+| AVG(energy) | AVG(valence) | AVG(danceability) |
++-------------+--------------+-------------------+
+| 0.65906     | 0.484443     | 0.71646           |
++-------------+--------------+-------------------+
+
+So one could say they like to dance, with no too much energy and even less valence.
 
 Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+Rather than averages, we could look at mean or medium. We could also remove outliers.
