@@ -1,7 +1,7 @@
-SELECT titles FROM movies, stars, people
+SELECT title FROM movies, stars, people
 WHERE movies.id = stars.movie_id
 AND people.id = stars.person_id
-AND
+AND name IN ('Bradley Cooper', 'Jennifer Lawrence');
 
 list the titles of all movies in which both Bradley Cooper and Jennifer Lawrence starred.
 
