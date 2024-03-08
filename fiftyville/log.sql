@@ -19,3 +19,13 @@ SELECT id, hour, minute, activity, license_plate FROM bakery_security_logs WHERE
 | 266 | 10   | 23     | exit     | 322W7JE       |
 | 267 | 10   | 23     | exit     | 0NTHK55       |
 +-----+------+--------+----------+---------------+*/
+SELECT DISTINCT atm_location FROM atm_transactions;
+/*+----------------------+
+|     atm_location     |
++----------------------+
+| Humphrey Lane        |
+| Daboin Sanchez Drive |
+| Carvalho Road        |
+| Leggett Street       |
+| Blumberg Boulevard   |
++----------------------+*/
