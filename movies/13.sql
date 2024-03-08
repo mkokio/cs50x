@@ -1,3 +1,8 @@
+SELECT title FROM people, movies, stars
+WHERE movie.id = stars.movie_id
+AND people.id = stars.person_id
+AND 
+
 
 list the names of all people who starred in a movie in which Kevin Bacon also starred.
 
