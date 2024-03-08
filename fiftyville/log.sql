@@ -64,3 +64,13 @@ SELECT * FROM airports WHERE city = 'Fiftyville';
 +----+--------------+-----------------------------+------------+
 | 8  | CSF          | Fiftyville Regional Airport | Fiftyville |
 +----+--------------+-----------------------------+------------+*/
+SELECT id, destination_airport_id, hour, minute FROM flights WHERE origin_airport_id = 8 AND month = 7 AND day = 28 ORDER BY hour;
+/*+----+------------------------+------+--------+
+| id | destination_airport_id | hour | minute |
++----+------------------------+------+--------+
+| 6  | 5                      | 13   | 49     |
+| 35 | 4                      | 16   | 16     |
+| 1  | 7                      | 17   | 50     |
+| 34 | 5                      | 17   | 20     |
+| 17 | 4                      | 20   | 16     |
++----+------------------------+------+--------+*/
