@@ -69,12 +69,12 @@ SELECT * FROM airports WHERE city = 'Fiftyville';
 +----+--------------+-----------------------------+------------+*/
 SELECT destination_airport_id, abbreviation, full_name, city, hour, minute FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = 8 AND month = 7 AND day = 28 ORDER BY hour;
 -- We know they took THE FIRST FLIGHT OUT OF TOWN
-/*+------------------------+--------------+-----------------------------------------+---------------+------+--------+
-| destination_airport_id | abbreviation |                full_name                |     city      | hour | minute |
-+------------------------+--------------+-----------------------------------------+---------------+------+--------+
-| 5                      | DFS          | Dallas/Fort Worth International Airport | Dallas        | 13   | 49     |
-| 4                      | LGA          | LaGuardia Airport                       | New York City | 16   | 16     |
-| 7                      | DXB          | Dubai International Airport             | Dubai         | 17   | 50     |
-| 5                      | DFS          | Dallas/Fort Worth International Airport | Dallas        | 17   | 20     |
-| 4                      | LGA          | LaGuardia Airport                       | New York City | 20   | 16     |
-+------------------------+--------------+-----------------------------------------+---------------+------+--------+*/
+/*+------+--------------+-----------------------------------------+---------------+------+--------+
+| d_a_id | abbreviation |                full_name                |     city      | hour | minute |
++--------+--------------+-----------------------------------------+---------------+------+--------+
+| 5      | DFS          | Dallas/Fort Worth International Airport | Dallas        | 13   | 49     |
+| 4      | LGA          | LaGuardia Airport                       | New York City | 16   | 16     |
+| 7      | DXB          | Dubai International Airport             | Dubai         | 17   | 50     |
+| 5      | DFS          | Dallas/Fort Worth International Airport | Dallas        | 17   | 20     |
+| 4      | LGA          | LaGuardia Airport                       | New York City | 20   | 16     |
++--------+--------------+-----------------------------------------+---------------+------+--------+*/
