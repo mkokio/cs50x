@@ -46,7 +46,7 @@ SELECT id, account_number, month, day, transaction_type, amount FROM atm_transac
 | 313 | 81061156       | 7     | 28  | withdraw         | 30     |
 | 336 | 26013199       | 7     | 28  | withdraw         | 35     |
 +-----+----------------+-------+-----+------------------+--------+*/
-SELECT id, caller, receiver, duration FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 1;
+SELECT id, caller, receiver, duration FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60;
 -- We know it's one of these callers, and the receiver is the accomplice
 /*+-----+----------------+----------------+----------+
 | id  |     caller     |    receiver    | duration |
