@@ -106,3 +106,18 @@ SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE
 | 686048 | Bruce   | (367) 555-5533 | 5773159633      | 94KL13X       |
 | 907148 | Carina  | (031) 555-6622 | 9628244268      | Q12B3Z3       |
 +--------+---------+----------------+-----------------+---------------+*/
+SELECT * FROM people WHERE phone_number IN (SELECT receiver FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60);
+--These are people whose phone number matches accomplice's receiver phone number
+/*+--------+------------+----------------+-----------------+---------------+
+|   id   |    name    |  phone_number  | passport_number | license_plate |
++--------+------------+----------------+-----------------+---------------+
+| 250277 | James      | (676) 555-6554 | 2438825627      | Q13SVG6       |
+| 251693 | Larry      | (892) 555-8872 | 2312901747      | O268ZZ0       |
+| 484375 | Anna       | (704) 555-2131 | NULL            | NULL          |
+| 567218 | Jack       | (996) 555-8899 | 9029462229      | 52R0Y8U       |
+| 626361 | Melissa    | (717) 555-1342 | 7834357192      | NULL          |
+| 712712 | Jacqueline | (910) 555-3251 | NULL            | 43V0R5D       |
+| 847116 | Philip     | (725) 555-3243 | 3391710505      | GW362R6       |
+| 864400 | Robin      | (375) 555-8161 | NULL            | 4V16VO0       |
+| 953679 | Doris      | (066) 555-9701 | 7214083635      | M51FA04       |
++--------+------------+----------------+-----------------+---------------+*/
