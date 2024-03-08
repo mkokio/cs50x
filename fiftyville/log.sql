@@ -79,7 +79,7 @@ SELECT destination_airport_id, abbreviation, full_name, city, hour, minute FROM 
 | 4      | LGA          | LaGuardia Airport                       | New York City | 20   | 16     |
 +--------+--------------+-----------------------------------------+---------------+------+--------+*/
 SELECT * FROM people WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25);
--- These are people with license plates that match
+-- These are people with license plates that match suspects
 /*+--------+---------+----------------+-----------------+---------------+
 |   id   |  name   |  phone_number  | passport_number | license_plate |
 +--------+---------+----------------+-----------------+---------------+
@@ -91,4 +91,18 @@ SELECT * FROM people WHERE license_plate IN (SELECT license_plate FROM bakery_se
 | 514354 | Diana   | (770) 555-1861 | 3592750733      | 322W7JE       |
 | 560886 | Kelsey  | (499) 555-9472 | 8294398571      | 0NTHK55       |
 | 686048 | Bruce   | (367) 555-5533 | 5773159633      | 94KL13X       |
++--------+---------+----------------+-----------------+---------------+*/
+SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60);
+-- These are people with phone numbers that match the suspects
+/*+--------+---------+----------------+-----------------+---------------+
+|   id   |  name   |  phone_number  | passport_number | license_plate |
++--------+---------+----------------+-----------------+---------------+
+| 395717 | Kenny   | (826) 555-1652 | 9878712108      | 30G67EN       |
+| 398010 | Sofia   | (130) 555-0289 | 1695452385      | G412CB7       |
+| 438727 | Benista | (338) 555-6650 | 9586786673      | 8X428L0       |
+| 449774 | Taylor  | (286) 555-6063 | 1988161715      | 1106N58       |
+| 514354 | Diana   | (770) 555-1861 | 3592750733      | 322W7JE       |
+| 560886 | Kelsey  | (499) 555-9472 | 8294398571      | 0NTHK55       |
+| 686048 | Bruce   | (367) 555-5533 | 5773159633      | 94KL13X       |
+| 907148 | Carina  | (031) 555-6622 | 9628244268      | Q12B3Z3       |
 +--------+---------+----------------+-----------------+---------------+*/
