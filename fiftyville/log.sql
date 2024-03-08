@@ -122,3 +122,12 @@ SELECT * FROM people WHERE phone_number IN (SELECT receiver FROM phone_calls WHE
 | 953679 | Doris      | (066) 555-9701 | 7214083635      | M51FA04       |
 +--------+------------+----------------+-----------------+---------------+*/
 SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60) AND license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25);
+-- These 4 people are main suspects, as they are on the license plate AND phone caller list
+/*+--------+--------+----------------+-----------------+---------------+
+|   id   |  name  |  phone_number  | passport_number | license_plate |
++--------+--------+----------------+-----------------+---------------+
+| 398010 | Sofia  | (130) 555-0289 | 1695452385      | G412CB7       |
+| 514354 | Diana  | (770) 555-1861 | 3592750733      | 322W7JE       |
+| 560886 | Kelsey | (499) 555-9472 | 8294398571      | 0NTHK55       |
+| 686048 | Bruce  | (367) 555-5533 | 5773159633      | 94KL13X       |
++--------+--------+----------------+-----------------+---------------+*/
