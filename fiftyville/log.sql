@@ -121,3 +121,4 @@ SELECT * FROM people WHERE phone_number IN (SELECT receiver FROM phone_calls WHE
 | 864400 | Robin      | (375) 555-8161 | NULL            | 4V16VO0       |
 | 953679 | Doris      | (066) 555-9701 | 7214083635      | M51FA04       |
 +--------+------------+----------------+-----------------+---------------+*/
+SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60) AND license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25);
