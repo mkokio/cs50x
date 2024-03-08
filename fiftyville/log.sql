@@ -58,3 +58,9 @@ SELECT id, caller, receiver, duration FROM phone_calls WHERE month = 7 AND day =
 | 279 | (826) 555-1652 | (066) 555-9701 | 55       |
 | 281 | (338) 555-6650 | (704) 555-2131 | 54       |
 +-----+----------------+----------------+----------+*/
+SELECT * FROM airports WHERE city = 'Fiftyville';
+/*+----+--------------+-----------------------------+------------+
+| id | abbreviation |          full_name          |    city    |
++----+--------------+-----------------------------+------------+
+| 8  | CSF          | Fiftyville Regional Airport | Fiftyville |
++----+--------------+-----------------------------+------------+*/
