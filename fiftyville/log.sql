@@ -131,3 +131,10 @@ SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE
 | 560886 | Kelsey | (499) 555-9472 | 8294398571      | 0NTHK55       |
 | 686048 | Bruce  | (367) 555-5533 | 5773159633      | 94KL13X       |
 +--------+--------+----------------+-----------------+---------------+*/
+SELECT flights.id, abbreviation, full_name, city, hour, minute FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = 8 AND month = 7 AND day = 28 ORDER BY hour LIMIT 1;
+-- This is the flight the the suspect took
+/*+----+--------------+-----------------------------------------+--------+------+--------+
+| id | abbreviation |                full_name                |  city  | hour | minute |
++----+--------------+-----------------------------------------+--------+------+--------+
+| 6  | DFS          | Dallas/Fort Worth International Airport | Dallas | 13   | 49     |
++----+--------------+-----------------------------------------+--------+------+--------+*/
