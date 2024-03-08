@@ -1,8 +1,9 @@
-SELECT title FROM people, movies, stars
-WHERE movie.id = stars.movie_id
+SELECT name FROM 
+(SELECT title FROM people, movies, stars
+WHERE movies.id = stars.movie_id
 AND people.id = stars.person_id
-AND 
-
+AND name ='Kevin Bacon'
+AND birth = 1958);
 
 list the names of all people who starred in a movie in which Kevin Bacon also starred.
 
