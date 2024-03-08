@@ -29,3 +29,18 @@ SELECT DISTINCT atm_location FROM atm_transactions;
 | Leggett Street       |
 | Blumberg Boulevard   |
 +----------------------+*/
+SELECT id, account_number, month, day, transaction_type, amount FROM atm_transactions WHERE atm_location = 'Leggett Street' AND month = 7 AND day = 2
+8;
+/*+-----+----------------+-------+-----+------------------+--------+
+| id  | account_number | month | day | transaction_type | amount |
++-----+----------------+-------+-----+------------------+--------+
+| 246 | 28500762       | 7     | 28  | withdraw         | 48     |
+| 264 | 28296815       | 7     | 28  | withdraw         | 20     |
+| 266 | 76054385       | 7     | 28  | withdraw         | 60     |
+| 267 | 49610011       | 7     | 28  | withdraw         | 50     |
+| 269 | 16153065       | 7     | 28  | withdraw         | 80     |
+| 275 | 86363979       | 7     | 28  | deposit          | 10     |
+| 288 | 25506511       | 7     | 28  | withdraw         | 20     |
+| 313 | 81061156       | 7     | 28  | withdraw         | 30     |
+| 336 | 26013199       | 7     | 28  | withdraw         | 35     |
++-----+----------------+-------+-----+------------------+--------+*/
