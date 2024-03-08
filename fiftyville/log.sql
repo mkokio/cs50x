@@ -47,7 +47,7 @@ SELECT id, account_number, month, day, transaction_type, amount FROM atm_transac
 | 336 | 26013199       | 7     | 28  | withdraw         | 35     |
 +-----+----------------+-------+-----+------------------+--------+*/
 SELECT id, caller, receiver, duration FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60;
--- We know it's one of these callers, and the 
+-- We know it's one of these callers, and the receiver is the accomplice
 /*+-----+----------------+----------------+----------+
 | id  |     caller     |    receiver    | duration |
 +-----+----------------+----------------+----------+
@@ -68,6 +68,7 @@ SELECT * FROM airports WHERE city = 'Fiftyville';
 | 8  | CSF          | Fiftyville Regional Airport | Fiftyville |
 +----+--------------+-----------------------------+------------+*/
 SELECT id, destination_airport_id, hour, minute FROM flights WHERE origin_airport_id = 8 AND month = 7 AND day = 28 ORDER BY hour;
+-- We know they took one of these flights
 /*+----+------------------------+------+--------+
 | id | destination_airport_id | hour | minute |
 +----+------------------------+------+--------+
