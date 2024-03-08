@@ -5,4 +5,4 @@ AND people.id = stars.person_id AND movies.id IN
 WHERE movies.id = stars.movie_id
 AND people.id = stars.person_id
 AND name ='Kevin Bacon'
-AND birth = 1958);
+AND birth = 1958) AND NOT name ='Kevin Bacon';
