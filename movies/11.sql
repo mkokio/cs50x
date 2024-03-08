@@ -1,3 +1,4 @@
+SELECT title, rating FROM movies, stars, people, ratings WHERE movies.id = stars.movie_id AND people.id = stars.person_id AND people.name = 'Chadwick Boseman' ORDER BY ratings.rating DESC;
 
 list the titles of the five highest rated movies (in order) that Chadwick Boseman starred in,
 starting with the highest rated.
