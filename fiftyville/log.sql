@@ -30,8 +30,7 @@ SELECT DISTINCT atm_location FROM atm_transactions;
 | Leggett Street       |
 | Blumberg Boulevard   |
 +----------------------+*/
-SELECT id, account_number, month, day, transaction_type, amount FROM atm_transactions WHERE atm_location = 'Leggett Street' AND month = 7 AND day = 2
-8;
+SELECT id, account_number, month, day, transaction_type, amount FROM atm_transactions WHERE atm_location = 'Leggett Street' AND month = 7 AND day = 28;
 -- We know it's one of these account numbers
 /*+-----+----------------+-------+-----+------------------+--------+
 | id  | account_number | month | day | transaction_type | amount |
@@ -173,5 +172,5 @@ SELECT passport_number, name FROM people WHERE phone_number IN (SELECT caller FR
 | 8294398571      | Kelsey |
 | 5773159633      | Bruce  |
 +-----------------+--------+*/
-SELECT account_number, person_id FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE atm_location = 'Leggett Street' AND month = 7 AND day = 2);
+SELECT account_number, person_id FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE atm_location = 'Leggett Street' AND month = 7 AND day = 28);
 
