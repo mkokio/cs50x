@@ -138,20 +138,21 @@ SELECT flights.id, abbreviation, full_name, city, hour, minute FROM flights, air
 +----+--------------+-----------------------------------------+--------+------+--------+
 | 6  | DFS          | Dallas/Fort Worth International Airport | Dallas | 13   | 49     |
 +----+--------------+-----------------------------------------+--------+------+--------+*/
-SELECT * FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = 8 AND month = 7 AND day = 28 ORDER BY hour LIMIT 1);
+SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 29 ORDER
+ BY hour, minute LIMIT 1);
 -- These are the people on the suspect's plane
-/*+-----------+-----------------+------+
-| flight_id | passport_number | seat |
-+-----------+-----------------+------+
-| 6         | 3835860232      | 9A   |
-| 6         | 1618186613      | 2C   |
-| 6         | 7179245843      | 3B   |
-| 6         | 1682575122      | 4B   |
-| 6         | 7597790505      | 5D   |
-| 6         | 6128131458      | 6B   |
-| 6         | 6264773605      | 7D   |
-| 6         | 3642612721      | 8A   |
-+-----------+-----------------+------+*/
+/*+-----------------+
+| passport_number |
++-----------------+
+| 7214083635      |
+| 1695452385      |
+| 5773159633      |
+| 1540955065      |
+| 8294398571      |
+| 1988161715      |
+| 9878712108      |
+| 8496433585      |
++-----------------+*/
 
 SELECT destination_airport_id, abbreviation FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 28 ORDER BY hour, minute LIMIT 1;
 -- This is the suspects's destination
@@ -160,5 +161,5 @@ SELECT destination_airport_id, abbreviation FROM flights, airports WHERE destina
 +------------------------+--------------+
 | 5                      | DFS          |
 +------------------------+--------------+*/
-SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 28 ORDER BY hour, minute LIMIT 1);
+SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 29 ORDER BY hour, minute LIMIT 1);
 -- Above are passport numbers of people on the first flight out of fiftyville
