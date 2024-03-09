@@ -160,5 +160,5 @@ SELECT destination_airport_id, abbreviation FROM flights, airports WHERE destina
 +------------------------+--------------+
 | 5                      | DFS          |
 +------------------------+--------------+*/
-SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE destination_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 28 ORDER BY hour, minute LIMIT 1);
+SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 28 ORDER BY hour, minute LIMIT 1);
 -- Above are passport numbers of people on the first flight out of fiftyville
