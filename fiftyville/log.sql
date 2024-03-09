@@ -155,3 +155,9 @@ SELECT * FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, air
 
 SELECT destination_airport_id, abbreviation FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 28 ORDER BY hour, minute LIMIT 1;
 -- This is the suspects's destination
+/*+------------------------+--------------+
+| destination_airport_id | abbreviation |
++------------------------+--------------+
+| 5                      | DFS          |
++------------------------+--------------+*/
+SELECT * FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = 8 AND month = 7 AND day = 28 ORDER BY hour LIMIT 1);
