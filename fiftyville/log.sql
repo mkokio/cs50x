@@ -173,4 +173,5 @@ SELECT passport_number, name FROM people WHERE phone_number IN (SELECT caller FR
 | 8294398571      | Kelsey |
 | 5773159633      | Bruce  |
 +-----------------+--------+*/
+SELECT account_number, person_id IN bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE atm_location = 'Leggett Street' AND month = 7 AND day = 2);
 
