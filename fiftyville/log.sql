@@ -153,4 +153,5 @@ SELECT * FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, air
 | 6         | 3642612721      | 8A   |
 +-----------+-----------------+------+*/
 
-SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = 8 AND month = 7 AND day = 28 ORDER BY hour LIMIT 1) AND passengers.passport_number IN (SELECT people.passport_number FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60) AND license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25));
+SELECT destination_airport_id, abbreviation FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 28 ORDER BY hour, minute LIMIT 1;
+-- This is the suspects's destination
