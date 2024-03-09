@@ -152,4 +152,5 @@ SELECT * FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, air
 | 6         | 6264773605      | 7D   |
 | 6         | 3642612721      | 8A   |
 +-----------+-----------------+------+*/
-SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60) AND license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25) AND passport_number IN (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = 8 AND month = 7 AND day = 28 ORDER BY hour LIMIT 1));
+
+SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = 8 AND month = 7 AND day = 28 ORDER BY hour LIMIT 1) AND passengers.passport_number IN (SELECT people.passport_number FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60) AND license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25));
