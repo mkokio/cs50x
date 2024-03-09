@@ -132,11 +132,11 @@ SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE
 +--------+--------+----------------+-----------------+---------------+*/
 SELECT flights.id, abbreviation, full_name, city, hour, minute FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = 8 AND month = 7 AND day = 28 ORDER BY hour LIMIT 1;
 -- This is the flight the the suspect took
-/*+----+--------------+-----------------------------------------+--------+------+--------+
-| id | abbreviation |                full_name                |  city  | hour | minute |
-+----+--------------+-----------------------------------------+--------+------+--------+
-| 6  | DFS          | Dallas/Fort Worth International Airport | Dallas | 13   | 49     |
-+----+--------------+-----------------------------------------+--------+------+--------+*/
+/*+----+--------------+-------------------+---------------+------+--------+
+| id | abbreviation |     full_name     |     city      | hour | minute |
++----+--------------+-------------------+---------------+------+--------+
+| 36 | LGA          | LaGuardia Airport | New York City | 8    | 20     |
++----+--------------+-------------------+---------------+------+--------+*/
 SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 29 ORDER
  BY hour, minute LIMIT 1);
 -- These are the people on the suspect's plane
@@ -191,4 +191,4 @@ SELECT receiver FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60 
 +----------------+*/
 SELECT name FROM people WHERE phone_number = (SELECT receiver FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60 AND caller = (SELECT phone_number FROM people WHERE name = (SELECT name FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60) AND license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25) AND passport_number IN (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 29 ORDER BY hour, minute LIMIT 1)) AND name IN (SELECT name FROM people WHERE id IN (SELECT person_id FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE atm_location = 'Leggett Street' AND month = 7 AND day = 28))))));
 -- Robin is the accomplice
-SELECT 
+SELECT
