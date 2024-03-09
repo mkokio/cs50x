@@ -67,7 +67,7 @@ SELECT * FROM airports WHERE city = 'Fiftyville';
 +----+--------------+-----------------------------+------------+
 | 8  | CSF          | Fiftyville Regional Airport | Fiftyville |
 +----+--------------+-----------------------------+------------+*/
-SELECT destination_airport_id, abbreviation, full_name, city, hour, minute FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = 8 AND month = 7 AND day = 28 ORDER BY hour;
+SELECT destination_airport_id, abbreviation, full_name, city, hour, minute FROM flights, airports WHERE destination_airport_id = airports.id AND origin_airport_id = (SELECT * FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 28 ORDER BY hour;
 -- We know they took THE FIRST FLIGHT OUT OF TOWN
 /*+------+--------------+-----------------------------------------+---------------+------+--------+
 | d_a_id | abbreviation |                full_name                |     city      | hour | minute |
