@@ -164,4 +164,13 @@ SELECT destination_airport_id, abbreviation FROM flights, airports WHERE destina
 SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 29 ORDER BY hour, minute LIMIT 1);
 -- Above are passport numbers of people on the first flight out of fiftyville
 
-SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 29 ORDER BY hour, minute LIMIT 1) AND passport_number IN (SELECT passport_number FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60) AND license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25));
+SELECT passport_number, name FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND duration < 60) AND license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25) AND passport_number IN (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT flights.id FROM flights, airports WHERE origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') AND month = 7 AND day = 29 ORDER BY hour, minute LIMIT 1));
+-- Above are three main suspects, people with matching phone calls, license plates and passports
+/*+-----------------+--------+
+| passport_number |  name  |
++-----------------+--------+
+| 1695452385      | Sofia  |
+| 8294398571      | Kelsey |
+| 5773159633      | Bruce  |
++-----------------+--------+*/
+
