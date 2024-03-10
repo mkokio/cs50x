@@ -25,8 +25,8 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>The three Totoros are &Omacr;Totoro, Ch&umacr;Totoro and ___________.</h3><!--Chibi-->
-                <p>Correct!</p>
-                <p>Incorrect</p>
+                <div id='a' style='vihidden'>Correct!</div>
+                <div id='b' style='hidden'>Incorrect</div>
                 <button id="chicken">Chicken</button>
                 <button id="chibi">Chibi</button>
                 <button id="chichai">Chichai</button>
@@ -34,7 +34,7 @@
                     let body = document.querySelector('body');
                     document.querySelector('#chicken').addEventListener('click', function() {
                         this.style.backgroundColor = 'red'/*make button red*/;
-                        /*make 'Incorrect' text visible*/
+                        a.style.visibility = 'visible'/*make 'Incorrect' text visible*/
                         });
                     document.querySelector('#chibi').addEventListener('click', function() {
                         this.style.backgroundColor = 'green'/*make button green*/;
