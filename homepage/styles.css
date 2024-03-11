@@ -5,4 +5,7 @@ p
     color: blue;
 }
 
-
+.modal-header
+{
+    font-weight: bold;
+}
