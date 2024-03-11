@@ -1,0 +1,23 @@
+10 or more html tags
+<nav>
+<div>
+<a>
+<button>
+<span>
+<ul>
+<ol>
+<li>
+<h1>
+<h2>
+<p>
+<button>
+<br>
+
+5 CSS properties with various selectors
+color
+font-weight
+background-color
+font-family
+text-decoration
+
+Javascript
