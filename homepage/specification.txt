@@ -21,4 +21,5 @@ font-family
 text-decoration
 
 Javascript
-I used the simple window.print()
+I used the simple window.print() method.
+
