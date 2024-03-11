@@ -11,7 +11,7 @@
                 let button = event.target;
 
                 // Check if the element's inner HTML matches expected answer
-                if (button.innerHTML == '1 person per 6 sheep') {
+                if (button.innerHTML == 'Chibi') {
                     button.style.backgroundColor = 'Green';
                     button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
                 }
@@ -35,9 +35,9 @@
                 <h3>The three Totoros are &Omacr;Totoro, Ch&umacr;Totoro and ___________.</h3><!--Chibi-->
                 <div id='a' style='hidden'>Correct!</div>
                 <div id='b' style='hidden'>Incorrect</div>
-                <button class="wrong">Chicken</button>
-                <button class="wrong">Chibi</button>
-                <button class="correct">Chichai</button>
+                <button class="">Chicken</button>
+                <button class="">Chibi</button>
+                <button class="">Chichai</button>
                 <script>
                     let body = document.querySelector('body');
                     document.querySelector('#chicken').addEventListener('click', function() {
