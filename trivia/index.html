@@ -13,11 +13,11 @@
                 // Check if the element's inner HTML matches expected answer
                 if (button.innerHTML == 'Chibi') {
                     button.style.backgroundColor = 'Green';
-                    button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                    button.parentElement.querySelector('.result').innerHTML = 'Correct!';
                 }
                 else {
                     button.style.backgroundColor = 'Red';
-                    button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                    button.parentElement.querySelector('.result').innerHTML = 'Incorrect';
                 }
                 }
         </script>
@@ -31,28 +31,13 @@
             <div class="section">
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
-                <!-- TODO: Add multiple choice question here -->
                 <h3>The three Totoros are &Omacr;Totoro, Ch&umacr;Totoro and ___________.</h3><!--Chibi-->
                 <div id='a' style='hidden'>Correct!</div>
                 <div id='b' style='hidden'>Incorrect</div>
-                <button onclick="checkMultiChoice(event)">Chicken</button>
-                <button onclick="checkMultiChoice(event)">Chibi</button>
-                <button onclick="checkMultiChoice(event)">Chichai</button>
-                <script>
-                    let body = document.querySelector('body');
-                    document.querySelector('#chicken').addEventListener('click', function() {
-                        this.style.backgroundColor = 'red'/*make button red*/;
-                        a.style.visibility = 'visible'/*make 'Incorrect' text visible*/
-                        });
-                    document.querySelector('#chibi').addEventListener('click', function() {
-                        this.style.backgroundColor = 'green'/*make button green*/;
-                        /*make 'Correct!' text visible*/
-                        });
-                    document.querySelector('#chichai').addEventListener('click', function() {
-                        this.style.backgroundColor = 'red'/*make button red*/;
-                        /*make 'Incorrect' text visible*/
-                        });
-                </script>
+                    <button onclick="checkMultiChoice(event)">Chicken</button>
+                    <button onclick="checkMultiChoice(event)">Chibi</button>
+                    <button onclick="checkMultiChoice(event)">Chichai</button>
+                    <p class="result"></p>
             </div>
 
             <div class="section">
