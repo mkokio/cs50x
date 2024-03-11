@@ -6,14 +6,20 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            // Wait for DOM content to load
-            document.addEventListener('DOMcontentloaded', function(){
-                // Get all elements with class "correct"
-                let corrects = document.querySelectorAll('.correct');
+            function checkMultiChoice(event) {
+                // Get the element which triggered the event
+                let button = event.target;
 
-
-                document.querySelector('form').addEventListener
-                });
+                // Check if the element's inner HTML matches expected answer
+                if (button.innerHTML == '1 person per 6 sheep') {
+                    button.style.backgroundColor = 'Green';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                }
+                else {
+                    button.style.backgroundColor = 'Red';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                }
+                }
         </script>
     </head>
     <body>
