@@ -18,8 +18,24 @@
                 else {
                     button.style.backgroundColor = 'Red';
                     button.parentElement.querySelector('.result').innerHTML = 'Incorrect';
-                }
-                }
+                }}
+
+                function checkFreeResponse(event) {
+                    // Get the element which triggered the event
+                    let button = event.target;
+
+                    // Get the input element corresponding to the button
+                    let input = button.parentElement.querySelector('input');
+
+                    // Check for correct answer
+                    if (input.value === 'Kusakabe') {
+                        input.style.backgroundColor = 'Green';
+                        input.parentElement.querySelector('.result').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'Red';
+                        input.parentElement.querySelector('.result').innerHTML = 'Incorrect';
+                    }
         </script>
     </head>
     <body>
@@ -45,10 +61,9 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>The dad's name in "My Neighbor Totoro" is Mister ___________.</h3><!--Kusakabe-->
-                <form>
-                    <input autocomplete="off" autofocus id="name" placeholder="Family Name" type="text">
-                    <button>Check Answer</button>
-                </form>
+                <input autocomplete="off" id="name" placeholder="Family Name" type="text">
+                <button onclick="checkFreeResponse(event)">Check Answer</button>
+                <p class="result"></p>
             </div>
         </div>
     </body>
