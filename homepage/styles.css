@@ -5,7 +5,17 @@ p
     color: blue;
 }
 
-.modal-header
+.modal-title
 {
     font-weight: bold;
+}
+
+.modal-body
+{
+    background-color: lightgreen;
+}
+
+#important_link
+{
+    
 }
