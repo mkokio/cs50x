@@ -55,6 +55,7 @@
             <p>^That is a bootstrap button & modal.</p>
 
             <!-- Button RST-->
+            <input id="nameRST" placeholder="write your name here">
             <button type="button" class="btn btn-secondary" onclick="alertName(event)">And this button?</button>
             <p>^ That is a button with javascript inline event handler</p>
 
@@ -77,10 +78,15 @@
             </div>
 
             <script>
+              /*RST button*/
               function alertName(event)
               {
-                var trigger = event.srcElement;
-                alert('Hello')
+                var name = document.getElementById('nameInput').value;
+    if (name !== "") {
+        alert('Hello, ' + name);
+    } else {
+        alert('Please enter your name.');
+    }
               }
             </script>
     </body>
