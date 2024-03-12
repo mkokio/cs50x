@@ -60,7 +60,7 @@
             <p>^ That is a button with javascript inline event handler</p>
 
             <!-- Button OPQ-->
-            <input id="nameOPQ" placeholder="write your favorite color">
+            <input id="colorOPQ" placeholder="write your favorite color">
             <button type="button" class="btn btn-info" id="buttonOPQ">Oh, what about this one?</button>
             <p>^ That is a button with a javascript event listener</p>
 
@@ -92,7 +92,17 @@
                 } else {
                     alert('Please enter your name.');
                 }
-            }
+              }
+
+            /*OPQ button*/
+            document.getElementById('ButtonOPQ').addEventListener('click', function() {
+              var color = document.getElementById('colorOPQ').value;
+              if (color !== "") {
+                    alert('Nice! I, too, like the color ' + name);
+                } else {
+                    alert('You did not write a color');
+                }
+            });
             </script>
     </body>
 </html>
