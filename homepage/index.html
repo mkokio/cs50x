@@ -79,15 +79,15 @@
 
             <script>
               /*RST button*/
-              function alertName(event)
-              {
-                var name = document.getElementById('nameInput').value;
-    if (name !== "") {
-        alert('Hello, ' + name);
-    } else {
-        alert('Please enter your name.');
-    }
-              }
+              function alertName(event) {
+                var trigger = event.srcElement;
+                var name = document.getElementById('nameRST').value;
+                if (name !== "") {
+                    alert('Hello, ' + name);
+                } else {
+                    alert('Please enter your name.');
+                }
+            }
             </script>
     </body>
 </html>
