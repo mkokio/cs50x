@@ -23,3 +23,22 @@ text-decoration
 Javascript
 I used the simple window.print() method.
 
+Event handler:
+              function alertName(event) {
+                var trigger = event.srcElement;
+                var name = document.getElementById('nameRST').value;
+                if (name !== "") {
+                    alert('Hello, ' + name);
+                } else {
+                    alert('Please enter your name.');
+                }
+              }
+Event Listener:
+            document.getElementById('buttonOPQ').addEventListener('click', function() {
+              var color = document.getElementById('colorOPQ').value;
+              if (color !== "") {
+                    alert('Nice! I, too, like the color ' + color);
+                } else {
+                    alert('You did not write a color');
+                }
+            });
